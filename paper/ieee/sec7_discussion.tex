@@ -1,0 +1,9 @@
+\section{Discussion and Limitations}\label{sec:discussion}
+
+\emph{Data.} The evaluation uses MVTec~AD textures as a proxy for fabrics because openly downloadable, pixel-annotated textile data sets are scarce. Carpet and grid are the closest analogues of woven fabric and are also the hardest categories for the station model; leather, tile, and wood are easier. Validation on images captured at the seaming machines themselves---which the system logs automatically, including every flagged frame---is the most important next step.
+
+\emph{Thresholds.} The LOO rule is label-free and works well for the edge model on four of five textures, but it fails on grid, where the normal-score distribution of ten shots does not cover the variability of the test images. More shots help (Section~\ref{sec:res-fewshot}); an operator-in-the-loop update that adds confirmed false alarms to the memory bank is a simple remedy that the logging already supports.
+
+\emph{Emulation.} Stations, broker, and edge server share one host and the links are emulated at the application layer, so radio effects (contention, retransmissions, jitter bursts) are not captured, and the station CPU is a single core of a laptop processor rather than an embedded board. Sharing the host is pessimistic for the edge server, which competes with up to 32 station processes for cores. To ease replication on real hardware, the repository contains a stand-alone station benchmark that needs only NumPy, SciPy, and OpenCV. Energy consumption was not measured.
+
+\emph{Scope.} The system detects anomalies; it does not name the defect type. Classifying flagged frames, for example with a small supervised model trained incrementally on the logged snapshots, would turn the inspection log into a labelled data set over time. Security of the MQTT deployment (TLS, authentication, access control lists) is supported by standard brokers but was disabled in the experiments.

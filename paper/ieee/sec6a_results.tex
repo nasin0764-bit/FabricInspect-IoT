@@ -1,0 +1,32 @@
+﻿\section{Results}\label{sec:results}
+
+\subsection{How Many Defect-Free Shots Are Needed?}\label{sec:res-fewshot}
+Fig.~\ref{fig:fewshot} plots image AUROC against the number of shots $k$, and Table~\ref{tab:k10} lists all metrics at the default $k=10$. Three observations matter for deployment.
+
+First, \emph{PatchCore-lite is the most accurate detector at every $k$}: averaged over the five textures its image AUROC is 0.904 with a single shot, 0.916 at $k=10$, and 0.977 with the full training set; its AUPRO rises from 0.747 to 0.786 and 0.894. Second, the \emph{stationary Gabor--Gaussian model is the most shot-efficient}: it reaches 0.828 at $k=1$---better than PaDiM (0.725), whose per-position Gaussians are poorly estimated from few images---and saturates early (0.860 at $k=10$, 0.872 with all shots). PaDiM needs $k\ge10$ to match it and $k\ge50$ to approach PatchCore-lite. Third, the gap between the station and edge models is strongly \emph{fabric-dependent}: on leather, tile, and wood the Gabor--Gaussian model is within 0.07 AUROC of PatchCore-lite (0.984/0.919/0.981 vs.\ 0.999/0.986/0.992 at $k=10$), whereas on carpet (0.740 vs.\ 0.967) and grid (0.674 vs.\ 0.636) neither the descriptor nor, for grid, the deep model is adequate at $k=10$. Grid improves markedly with more shots (PatchCore-lite 0.921 with all 264 images), indicating that its fine periodic mesh needs either more normal variability or a higher working resolution than $256\times256$.
+
+Fig.~\ref{fig:qual} shows typical anomaly maps at $k=10$ with the label-free thresholds. Both models localise the carpet thread, the leather cut, and the tile crack (the station model fragments the thin crack), and both miss the small broken cells of the grid, consistent with Table~\ref{tab:k10}. The wood example illustrates that the models are complementary rather than nested: the colour-sensitive station model flags the bleached scratch, whereas PatchCore-lite's response stays below its threshold.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig_qualitative.png}
+\caption{Anomaly maps of the station (Gabor--Gaussian) and edge (PatchCore-lite) models for one defect per texture ($k=10$). Yellow: ground truth; red: regions above the label-free LOO threshold.}
+\label{fig:qual}
+\end{figure}
+
+This fabric dependence is precisely what motivates a two-tier design: a cheap model suffices for many fabrics, and an uncertainty-driven gate can route the remaining frames to the stronger model.
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig_fewshot_image.png}
+\caption{Image-level AUROC versus number of defect-free shots $k$ (log scale; mean $\pm$ std over three random draws). The last panel averages the five categories (``all'' plotted at $k\approx230$).}
+\label{fig:fewshot}
+\end{figure*}
+
+
+
+\subsection{Label-Free Thresholds}\label{sec:res-threshold}
+Table~\ref{tab:threshold} reports the decisions obtained with the LOO threshold (\ref{eq:tau}). For PatchCore-lite at $k=10$ and the default margin $m=0.1$, the false-alarm rate on good test images is 3.4\,\% at a defect recall of 71.8\,\% (F1 0.753); without margin the recall rises to 78.8\,\% but false alarms increase to 24.5\,\%, and $m=0.2$ removes false alarms entirely at 65.3\,\% recall. The margin is therefore a single, interpretable knob that trades nuisance stops against escapes, and $m=0.1$ is a reasonable default for an operator-facing alarm. The station model's LOO threshold is far less reliable (FPR 28.2\,\% at $m=0.1$, $k=10$), dominated by leather (95.8\,\%) and carpet (38.1\,\%; Table~\ref{tab:gate}): for these fabrics the maximum of ten LOO scores underestimates the range of normal scores on unseen images. This is a second argument for not using the station model alone, and for using its threshold only to \emph{define} an uncertainty band rather than to issue final defect verdicts near the boundary.
+
+
+

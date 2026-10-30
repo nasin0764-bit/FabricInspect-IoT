@@ -1,0 +1,23 @@
+\begin{table}[t]
+\centering
+\caption{Computational resources per $256\times256$ frame ($k=20$; median of 30 runs, single process). Profile: serialised model per fabric; $^\dagger$in-memory statistics (not serialised in the application).}
+\label{tab:resources}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+& Fit [s] & \multicolumn{2}{c}{Inference [ms]} & Profile & Backbone \\
+\cmidrule(lr){3-4}
+Model & & 8 thr. & 2 thr. & [kB] & [MB] \\
+\midrule
+GG & 0.84 & 39.1 & 36.5 & 5.9 & 0.0 \\
+PC & 2.10 & 20.4 & 39.4 & 1221.5 & 44.7 \\
+PD & 0.93 & 26.4 & 41.2 & 165478$^\dagger$ & 44.7 \\
+\bottomrule
+\end{tabular}
+
+\vspace{2pt}
+\begin{flushleft}\footnotesize
+Station (1 thread, $k=10$): 36.8 ms median, 39.3 ms p95. Edge throughput $\mu(b)$ [frames/s]: $b{=}1$: 59, $b{=}2$: 54, $b{=}4$: 66, $b{=}8$: 63, $b{=}16$: 66.
+\end{flushleft}
+\end{table}

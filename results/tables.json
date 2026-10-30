@@ -1,0 +1,2061 @@
+{
+ "fewshot": [
+  {
+   "k": 10,
+   "cat": "carpet",
+   "Gabor-Gaussian|img_auroc": [
+    0.7398341359015516,
+    0.012269643975889448
+   ],
+   "Gabor-Gaussian|px_auroc": [
+    0.8832071362633225,
+    0.0046470454482719714
+   ],
+   "Gabor-Gaussian|aupro": [
+    0.6429472031456097,
+    0.01356141198612259
+   ],
+   "PatchCore-lite|img_auroc": [
+    0.967362225789192,
+    0.006506359821838091
+   ],
+   "PatchCore-lite|px_auroc": [
+    0.9877591346309987,
+    0.00026168034266409374
+   ],
+   "PatchCore-lite|aupro": [
+    0.9327997632136865,
+    0.009336247951868932
+   ],
+   "PaDiM|img_auroc": [
+    0.8812199036918137,
+    0.006880589165121316
+   ],
+   "PaDiM|px_auroc": [
+    0.9723589536652084,
+    0.0008082269399826645
+   ],
+   "PaDiM|aupro": [
+    0.9109883839970351,
+    0.008625404937225377
+   ]
+  },
+  {
+   "k": 10,
+   "cat": "grid",
+   "Gabor-Gaussian|img_auroc": [
+    0.6744639376218323,
+    0.07365728435195129
+   ],
+   "Gabor-Gaussian|px_auroc": [
+    0.6209654252322135,
+    0.013004161395542726
+   ],
+   "Gabor-Gaussian|aupro": [
+    0.1783583813409667,
+    0.02015108601980408
+   ],
+   "PatchCore-lite|img_auroc": [
+    0.636034530771373,
+    0.05463060154728096
+   ],
+   "PatchCore-lite|px_auroc": [
+    0.7424160193317467,
+    0.04348054282435353
+   ],
+   "PatchCore-lite|aupro": [
+    0.3333759278566115,
+    0.05890126183603775
+   ],
+   "PaDiM|img_auroc": [
+    0.6329713171818435,
+    0.05121498828213934
+   ],
+   "PaDiM|px_auroc": [
+    0.6761056055231806,
+    0.0056008283855927925
+   ],
+   "PaDiM|aupro": [
+    0.3303247652538164,
+    0.016181680625024862
+   ]
+  },
+  {
+   "k": 10,
+   "cat": "leather",
+   "Gabor-Gaussian|img_auroc": [
+    0.9838088768115942,
+    0.002358771134057933
+   ],
+   "Gabor-Gaussian|px_auroc": [
+    0.9934743199787044,
+    0.00016996980141867888
+   ],
+   "Gabor-Gaussian|aupro": [
+    0.9837565130340965,
+    0.00040041535722985615
+   ],
+   "PatchCore-lite|img_auroc": [
+    0.9990942028985508,
+    0.0008472956038890278
+   ],
+   "PatchCore-lite|px_auroc": [
+    0.9920634646678869,
+    6.718475614171588e-05
+   ],
+   "PatchCore-lite|aupro": [
+    0.9648643741966976,
+    0.012028704176546272
+   ],
+   "PaDiM|img_auroc": [
+    0.9612771739130435,
+    0.003751820997685855
+   ],
+   "PaDiM|px_auroc": [
+    0.9892149166891494,
+    0.0003700228752876003
+   ],
+   "PaDiM|aupro": [
+    0.9665513438405607,
+    0.010523281519365626
+   ]
+  },
+  {
+   "k": 10,
+   "cat": "tile",
+   "Gabor-Gaussian|img_auroc": [
+    0.9194324194324195,
+    0.00265641198104554
+   ],
+   "Gabor-Gaussian|px_auroc": [
+    0.9358396754386833,
+    0.006891641629959676
+   ],
+   "Gabor-Gaussian|aupro": [
+    0.7678431351499052,
+    0.022830495006599904
+   ],
+   "PatchCore-lite|img_auroc": [
+    0.9861712361712361,
+    0.006903655649065537
+   ],
+   "PatchCore-lite|px_auroc": [
+    0.9400072138635597,
+    0.0016431471920053903
+   ],
+   "PatchCore-lite|aupro": [
+    0.8168046805645718,
+    0.004692020456334705
+   ],
+   "PaDiM|img_auroc": [
+    0.8409090909090908,
+    0.022840559937462902
+   ],
+   "PaDiM|px_auroc": [
+    0.8195005345374854,
+    0.006607904186858565
+   ],
+   "PaDiM|aupro": [
+    0.6059141518249259,
+    0.014173047869631878
+   ]
+  },
+  {
+   "k": 10,
+   "cat": "wood",
+   "Gabor-Gaussian|img_auroc": [
+    0.980701754385965,
+    0.003987772426019268
+   ],
+   "Gabor-Gaussian|px_auroc": [
+    0.9322086385910516,
+    0.006740690837710034
+   ],
+   "Gabor-Gaussian|aupro": [
+    0.8785567894710277,
+    0.009333731460634839
+   ],
+   "PatchCore-lite|img_auroc": [
+    0.9923976608187134,
+    0.001094051867477764
+   ],
+   "PatchCore-lite|px_auroc": [
+    0.9293373882723897,
+    0.0024145480555893307
+   ],
+   "PatchCore-lite|aupro": [
+    0.8821639331780196,
+    0.002099488276563881
+   ],
+   "PaDiM|img_auroc": [
+    0.9891812865497077,
+    0.0008270254750719618
+   ],
+   "PaDiM|px_auroc": [
+    0.930715263073751,
+    0.002773206024874459
+   ],
+   "PaDiM|aupro": [
+    0.907819889352593,
+    0.0015540573583426268
+   ]
+  },
+  {
+   "k": "full",
+   "cat": "carpet",
+   "Gabor-Gaussian|img_auroc": [
+    0.733948635634029,
+    0.0
+   ],
+   "Gabor-Gaussian|px_auroc": [
+    0.8895997404100726,
+    0.0
+   ],
+   "Gabor-Gaussian|aupro": [
+    0.6545826327708055,
+    0.0
+   ],
+   "PatchCore-lite|img_auroc": [
+    0.9803370786516854,
+    0.0
+   ],
+   "PatchCore-lite|px_auroc": [
+    0.9890480548579322,
+    0.0
+   ],
+   "PatchCore-lite|aupro": [
+    0.9479807018489904,
+    0.0
+   ],
+   "PaDiM|img_auroc": [
+    0.9670947030497592,
+    0.0
+   ],
+   "PaDiM|px_auroc": [
+    0.9871102390389902,
+    0.0
+   ],
+   "PaDiM|aupro": [
+    0.9552029788388189,
+    0.0
+   ]
+  },
+  {
+   "k": "full",
+   "cat": "grid",
+   "Gabor-Gaussian|img_auroc": [
+    0.7485380116959063,
+    0.0
+   ],
+   "Gabor-Gaussian|px_auroc": [
+    0.722806356784079,
+    0.0
+   ],
+   "Gabor-Gaussian|aupro": [
+    0.4325672764847478,
+    0.0
+   ],
+   "PatchCore-lite|img_auroc": [
+    0.9206349206349207,
+    0.0
+   ],
+   "PatchCore-lite|px_auroc": [
+    0.968440185166403,
+    0.0
+   ],
+   "PatchCore-lite|aupro": [
+    0.8636650153763341,
+    0.0
+   ],
+   "PaDiM|img_auroc": [
+    0.9223057644110275,
+    0.0
+   ],
+   "PaDiM|px_auroc": [
+    0.925067444448503,
+    0.0
+   ],
+   "PaDiM|aupro": [
+    0.8419822474667714,
+    0.0
+   ]
+  },
+  {
+   "k": "full",
+   "cat": "leather",
+   "Gabor-Gaussian|img_auroc": [
+    0.9840353260869565,
+    0.0
+   ],
+   "Gabor-Gaussian|px_auroc": [
+    0.9936979143288005,
+    0.0
+   ],
+   "Gabor-Gaussian|aupro": [
+    0.9839766119350972,
+    0.0
+   ],
+   "PatchCore-lite|img_auroc": [
+    1.0,
+    0.0
+   ],
+   "PatchCore-lite|px_auroc": [
+    0.9920695040737476,
+    0.0
+   ],
+   "PatchCore-lite|aupro": [
+    0.9422507831051432,
+    0.0
+   ],
+   "PaDiM|img_auroc": [
+    0.9972826086956522,
+    0.0
+   ],
+   "PaDiM|px_auroc": [
+    0.9931664981418948,
+    0.0
+   ],
+   "PaDiM|aupro": [
+    0.9814461379703184,
+    0.0
+   ]
+  },
+  {
+   "k": "full",
+   "cat": "tile",
+   "Gabor-Gaussian|img_auroc": [
+    0.9145021645021645,
+    0.0
+   ],
+   "Gabor-Gaussian|px_auroc": [
+    0.9313434904161765,
+    0.0
+   ],
+   "Gabor-Gaussian|aupro": [
+    0.747084316659216,
+    0.0
+   ],
+   "PatchCore-lite|img_auroc": [
+    0.9938672438672438,
+    0.0
+   ],
+   "PatchCore-lite|px_auroc": [
+    0.9431198923303841,
+    0.0
+   ],
+   "PatchCore-lite|aupro": [
+    0.8330113991604099,
+    0.0
+   ],
+   "PaDiM|img_auroc": [
+    0.9433621933621934,
+    0.0
+   ],
+   "PaDiM|px_auroc": [
+    0.9159958472960495,
+    0.0
+   ],
+   "PaDiM|aupro": [
+    0.7705592272692148,
+    0.0
+   ]
+  },
+  {
+   "k": "full",
+   "cat": "wood",
+   "Gabor-Gaussian|img_auroc": [
+    0.9789473684210527,
+    0.0
+   ],
+   "Gabor-Gaussian|px_auroc": [
+    0.9363345230368553,
+    0.0
+   ],
+   "Gabor-Gaussian|aupro": [
+    0.8868371251000577,
+    0.0
+   ],
+   "PatchCore-lite|img_auroc": [
+    0.9912280701754386,
+    0.0
+   ],
+   "PatchCore-lite|px_auroc": [
+    0.9337634909253264,
+    0.0
+   ],
+   "PatchCore-lite|aupro": [
+    0.8855081292272295,
+    0.0
+   ],
+   "PaDiM|img_auroc": [
+    0.9815789473684211,
+    0.0
+   ],
+   "PaDiM|px_auroc": [
+    0.9390737852739456,
+    0.0
+   ],
+   "PaDiM|aupro": [
+    0.9136558255879081,
+    0.0
+   ]
+  }
+ ],
+ "fit_time": {
+  "Gabor-Gaussian|1": 0.0018132999994122656,
+  "Gabor-Gaussian|2": 0.0036591000000001372,
+  "Gabor-Gaussian|5": 0.008848900000884896,
+  "Gabor-Gaussian|10": 0.016903100000000393,
+  "Gabor-Gaussian|20": 0.033730499999819585,
+  "Gabor-Gaussian|50": 0.11683670000000745,
+  "Gabor-Gaussian|full": 0.27277989999993224,
+  "PatchCore-lite|1": 0.000654599999961647,
+  "PatchCore-lite|2": 0.0007675000000091359,
+  "PatchCore-lite|5": 0.0013029999999929487,
+  "PatchCore-lite|10": 0.002280500000097163,
+  "PatchCore-lite|20": 0.0030749999999670763,
+  "PatchCore-lite|50": 0.00737939999999071,
+  "PatchCore-lite|full": 0.03495169999951031,
+  "PaDiM|1": 0.6441879000000199,
+  "PaDiM|2": 0.9246481000009226,
+  "PaDiM|5": 1.9436015999999654,
+  "PaDiM|10": 3.086395899999985,
+  "PaDiM|20": 5.617983600000116,
+  "PaDiM|50": 36.43363529999999,
+  "PaDiM|full": 250.96737800000005
+ },
+ "threshold": [
+  {
+   "method": "Gabor-Gaussian",
+   "k": 5,
+   "margin": 0.0,
+   "precision": [
+    0.8441365573164377,
+    0.2516603724154343
+   ],
+   "recall": [
+    0.6214081082856955,
+    0.35178068343050173
+   ],
+   "f1": [
+    0.6605669807002992,
+    0.31760086246506714
+   ],
+   "fpr": [
+    0.22703064479380272,
+    0.3619240410297045
+   ]
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "k": 5,
+   "margin": 0.1,
+   "precision": [
+    0.8163836221339233,
+    0.3312711910141257
+   ],
+   "recall": [
+    0.5688445833685337,
+    0.36608456517542703
+   ],
+   "f1": [
+    0.6168672885969919,
+    0.3342088605489546
+   ],
+   "fpr": [
+    0.17570488721804514,
+    0.3346851248302118
+   ]
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "k": 5,
+   "margin": 0.2,
+   "precision": [
+    0.7583484054102397,
+    0.3876566489435379
+   ],
+   "recall": [
+    0.5352166934189405,
+    0.37851610805110797
+   ],
+   "f1": [
+    0.5830842103809156,
+    0.35411071398766436
+   ],
+   "fpr": [
+    0.15219298245614038,
+    0.31937546510589
+   ]
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "k": 5,
+   "margin": 0.3,
+   "precision": [
+    0.7647448356558681,
+    0.38902082371719593
+   ],
+   "recall": [
+    0.5032316746923489,
+    0.3805495302193223
+   ],
+   "f1": [
+    0.5555026946951204,
+    0.36131195161412466
+   ],
+   "fpr": [
+    0.125109649122807,
+    0.2770623963722493
+   ]
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "k": 10,
+   "margin": 0.0,
+   "precision": [
+    0.9009249785586724,
+    0.10803378607397289
+   ],
+   "recall": [
+    0.6695927083626668,
+    0.32905130303042923
+   ],
+   "f1": [
+    0.6934924967965835,
+    0.2829893112784815
+   ],
+   "fpr": [
+    0.3351294903926482,
+    0.42141914187838486
+   ]
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "k": 10,
+   "margin": 0.1,
+   "precision": [
+    0.7767250468644692,
+    0.3185014677658207
+   ],
+   "recall": [
+    0.623879267457032,
+    0.3419935510607749
+   ],
+   "f1": [
+    0.6586422936266139,
+    0.3059830896705208
+   ],
+   "fpr": [
+    0.2815580618212197,
+    0.3768683268989823
+   ]
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "k": 10,
+   "margin": 0.2,
+   "precision": [
+    0.7972996500933482,
+    0.3242864573675418
+   ],
+   "recall": [
+    0.5768766485502145,
+    0.35111429670947447
+   ],
+   "f1": [
+    0.6241356008484418,
+    0.31356051268014407
+   ],
+   "fpr": [
+    0.22451441102756897,
+    0.34404529052563854
+   ]
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "k": 10,
+   "margin": 0.3,
+   "precision": [
+    0.8136419378456845,
+    0.32924766437998315
+   ],
+   "recall": [
+    0.540695183652014,
+    0.3611098684969392
+   ],
+   "f1": [
+    0.5926851932501002,
+    0.33250567460318414
+   ],
+   "fpr": [
+    0.17963659147869676,
+    0.31055691328381446
+   ]
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "k": 20,
+   "margin": 0.0,
+   "precision": [
+    0.8580084309552268,
+    0.24527093606208797
+   ],
+   "recall": [
+    0.6481275285592257,
+    0.3442168430089789
+   ],
+   "f1": [
+    0.6795614218875294,
+    0.30888364284568126
+   ],
+   "fpr": [
+    0.25457393483709273,
+    0.3214657014357975
+   ]
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "k": 20,
+   "margin": 0.1,
+   "precision": [
+    0.7996120921771046,
+    0.32278859996080167
+   ],
+   "recall": [
+    0.6022999446180995,
+    0.3510192469798567
+   ],
+   "f1": [
+    0.6448968279009706,
+    0.33289835050837235
+   ],
+   "fpr": [
+    0.20635964912280705,
+    0.2686553679574815
+   ]
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "k": 20,
+   "margin": 0.2,
+   "precision": [
+    0.7387841884308568,
+    0.3763480341282854
+   ],
+   "recall": [
+    0.5584162653825575,
+    0.3480525033414263
+   ],
+   "f1": [
+    0.6155345142919619,
+    0.337899622884138
+   ],
+   "fpr": [
+    0.1640977443609023,
+    0.22229522904223137
+   ]
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "k": 20,
+   "margin": 0.3,
+   "precision": [
+    0.7609208438825754,
+    0.38283486318081283
+   ],
+   "recall": [
+    0.5202778359348951,
+    0.3406392099989912
+   ],
+   "f1": [
+    0.5955995888322684,
+    0.33500899634294656
+   ],
+   "fpr": [
+    0.08969298245614034,
+    0.12069606501646131
+   ]
+  },
+  {
+   "method": "PatchCore-lite",
+   "k": 5,
+   "margin": 0.0,
+   "precision": [
+    0.7732657983171546,
+    0.30966406118437195
+   ],
+   "recall": [
+    0.8095323514779457,
+    0.35446639786584566
+   ],
+   "f1": [
+    0.7808374900929488,
+    0.32616682652327866
+   ],
+   "fpr": [
+    0.310977728411939,
+    0.28291500783720475
+   ]
+  },
+  {
+   "method": "PatchCore-lite",
+   "k": 5,
+   "margin": 0.1,
+   "precision": [
+    0.8119305088218103,
+    0.3408776288901731
+   ],
+   "recall": [
+    0.7343960699664809,
+    0.3702248115140259
+   ],
+   "f1": [
+    0.7554980403336026,
+    0.3736564251286337
+   ],
+   "fpr": [
+    0.07059267486899067,
+    0.10633397905671048
+   ]
+  },
+  {
+   "method": "PatchCore-lite",
+   "k": 5,
+   "margin": 0.2,
+   "precision": [
+    0.7941917469758678,
+    0.39721937895996345
+   ],
+   "recall": [
+    0.683968021339785,
+    0.35709151031306974
+   ],
+   "f1": [
+    0.7312352674262164,
+    0.3706921380844297
+   ],
+   "fpr": [
+    0.016901629072681706,
+    0.030168107490354167
+   ]
+  },
+  {
+   "method": "PatchCore-lite",
+   "k": 5,
+   "margin": 0.3,
+   "precision": [
+    0.8,
+    0.4000000000000001
+   ],
+   "recall": [
+    0.6087637347725281,
+    0.34459833697281655
+   ],
+   "f1": [
+    0.6807396116908371,
+    0.3598418283567869
+   ],
+   "fpr": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "method": "PatchCore-lite",
+   "k": 10,
+   "margin": 0.0,
+   "precision": [
+    0.8508671463461336,
+    0.23883416078861733
+   ],
+   "recall": [
+    0.7881234922512272,
+    0.354380398414203
+   ],
+   "f1": [
+    0.7777360672243199,
+    0.3214992920500982
+   ],
+   "fpr": [
+    0.24498319662793347,
+    0.24912888792612098
+   ]
+  },
+  {
+   "method": "PatchCore-lite",
+   "k": 10,
+   "margin": 0.1,
+   "precision": [
+    0.8553169346034584,
+    0.33590269919406696
+   ],
+   "recall": [
+    0.7176482282077118,
+    0.36102528018966673
+   ],
+   "f1": [
+    0.7526282978433393,
+    0.36753740247767724
+   ],
+   "fpr": [
+    0.034398496240601505,
+    0.05289001845740171
+   ]
+  },
+  {
+   "method": "PatchCore-lite",
+   "k": 10,
+   "margin": 0.2,
+   "precision": [
+    0.8,
+    0.4000000000000001
+   ],
+   "recall": [
+    0.6525977621141276,
+    0.3506695054531554
+   ],
+   "f1": [
+    0.7129895727764358,
+    0.3659329086290296
+   ],
+   "fpr": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "method": "PatchCore-lite",
+   "k": 10,
+   "margin": 0.3,
+   "precision": [
+    0.8,
+    0.4000000000000001
+   ],
+   "recall": [
+    0.5729277843689177,
+    0.340723755346329
+   ],
+   "f1": [
+    0.6527211866321903,
+    0.35510069836188524
+   ],
+   "fpr": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "method": "PatchCore-lite",
+   "k": 20,
+   "margin": 0.0,
+   "precision": [
+    0.8883541221465603,
+    0.24038333019233862
+   ],
+   "recall": [
+    0.8010335764504894,
+    0.3317333546921334
+   ],
+   "f1": [
+    0.8102899966804818,
+    0.2958782310727267
+   ],
+   "fpr": [
+    0.14493810283283967,
+    0.1297797464233188
+   ]
+  },
+  {
+   "method": "PatchCore-lite",
+   "k": 20,
+   "margin": 0.1,
+   "precision": [
+    0.8583855908007563,
+    0.33685478840450855
+   ],
+   "recall": [
+    0.7218027277932658,
+    0.3688231065952924
+   ],
+   "f1": [
+    0.754103477805295,
+    0.37469851471590626
+   ],
+   "fpr": [
+    0.025046992481203005,
+    0.03385761799652911
+   ]
+  },
+  {
+   "method": "PatchCore-lite",
+   "k": 20,
+   "margin": 0.2,
+   "precision": [
+    0.8,
+    0.4000000000000001
+   ],
+   "recall": [
+    0.6535501430665086,
+    0.35352708102450725
+   ],
+   "f1": [
+    0.7127433683853471,
+    0.36754955844289233
+   ],
+   "fpr": [
+    0.0,
+    0.0
+   ]
+  },
+  {
+   "method": "PatchCore-lite",
+   "k": 20,
+   "margin": 0.3,
+   "precision": [
+    0.8,
+    0.4000000000000001
+   ],
+   "recall": [
+    0.5789244810446569,
+    0.34800199005158283
+   ],
+   "f1": [
+    0.6554506134658774,
+    0.3589238614278299
+   ],
+   "fpr": [
+    0.0,
+    0.0
+   ]
+  }
+ ],
+ "threshold_cat": [
+  {
+   "method": "Gabor-Gaussian",
+   "cat": "carpet",
+   "f1": 0.7183604657288868,
+   "fpr": 0.38095238095238093,
+   "recall": 0.6516853932584269
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "cat": "grid",
+   "f1": 0.08955223880597014,
+   "fpr": 0.015873015873015872,
+   "recall": 0.05263157894736842
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "cat": "leather",
+   "f1": 0.8572094106685301,
+   "fpr": 0.9583333333333334,
+   "recall": 1.0
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "cat": "tile",
+   "f1": 0.7165924762154141,
+   "fpr": 0.0,
+   "recall": 0.5595238095238096
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "cat": "wood",
+   "f1": 0.9114968767142679,
+   "fpr": 0.05263157894736842,
+   "recall": 0.8555555555555555
+  },
+  {
+   "method": "PatchCore-lite",
+   "cat": "carpet",
+   "f1": 0.9233246028650122,
+   "fpr": 0.09523809523809523,
+   "recall": 0.8838951310861424
+  },
+  {
+   "method": "PatchCore-lite",
+   "cat": "grid",
+   "f1": 0.02259887005649717,
+   "fpr": 0.0,
+   "recall": 0.011695906432748537
+  },
+  {
+   "method": "PatchCore-lite",
+   "cat": "leather",
+   "f1": 0.9854855033254605,
+   "fpr": 0.041666666666666664,
+   "recall": 0.9855072463768115
+  },
+  {
+   "method": "PatchCore-lite",
+   "cat": "tile",
+   "f1": 0.8718291313272143,
+   "fpr": 0.0,
+   "recall": 0.7738095238095238
+  },
+  {
+   "method": "PatchCore-lite",
+   "cat": "wood",
+   "f1": 0.9599033816425121,
+   "fpr": 0.03508771929824561,
+   "recall": 0.9333333333333332
+  }
+ ],
+ "robust": [
+  {
+   "img_auroc": 0.7311396468699839,
+   "px_auroc": 0.8894664775949748,
+   "aupro": 0.6418456635346873,
+   "cat": "carpet",
+   "method": "Gabor-Gaussian",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.7640449438202247,
+   "px_auroc": 0.9051766189386453,
+   "aupro": 0.700929979205167,
+   "cat": "carpet",
+   "method": "Gabor-Gaussian",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.6918138041733548,
+   "px_auroc": 0.8551416118363537,
+   "aupro": 0.5898806101838465,
+   "cat": "carpet",
+   "method": "Gabor-Gaussian",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.5381219903691814,
+   "px_auroc": 0.6408911200363436,
+   "aupro": 0.36577792951241994,
+   "cat": "carpet",
+   "method": "Gabor-Gaussian",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.6873996789727127,
+   "px_auroc": 0.748635640759094,
+   "aupro": 0.5244425768524349,
+   "cat": "carpet",
+   "method": "Gabor-Gaussian",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9674959871589085,
+   "px_auroc": 0.9882501408923541,
+   "aupro": 0.9407282145848915,
+   "cat": "carpet",
+   "method": "PatchCore-lite",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9751203852327447,
+   "px_auroc": 0.9881278015058763,
+   "aupro": 0.9223824105333001,
+   "cat": "carpet",
+   "method": "PatchCore-lite",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.96107544141252,
+   "px_auroc": 0.9875194346478127,
+   "aupro": 0.9205141621501616,
+   "cat": "carpet",
+   "method": "PatchCore-lite",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9570626003210273,
+   "px_auroc": 0.9457588965207719,
+   "aupro": 0.8403719523886496,
+   "cat": "carpet",
+   "method": "PatchCore-lite",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9626805778491172,
+   "px_auroc": 0.9849505081176781,
+   "aupro": 0.9242746400286461,
+   "cat": "carpet",
+   "method": "PatchCore-lite",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9185393258426967,
+   "px_auroc": 0.9772968612376582,
+   "aupro": 0.9331784075130395,
+   "cat": "carpet",
+   "method": "PaDiM",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9353932584269663,
+   "px_auroc": 0.9786793764312801,
+   "aupro": 0.9354785689902028,
+   "cat": "carpet",
+   "method": "PaDiM",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9020866773675762,
+   "px_auroc": 0.9718392398557859,
+   "aupro": 0.9206467788319785,
+   "cat": "carpet",
+   "method": "PaDiM",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.8198234349919744,
+   "px_auroc": 0.898796191710642,
+   "aupro": 0.7691016443868864,
+   "cat": "carpet",
+   "method": "PaDiM",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.8820224719101123,
+   "px_auroc": 0.9682358382283559,
+   "aupro": 0.885279484506466,
+   "cat": "carpet",
+   "method": "PaDiM",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.7552213868003341,
+   "px_auroc": 0.6897721910427158,
+   "aupro": 0.33781624642892094,
+   "cat": "grid",
+   "method": "Gabor-Gaussian",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.692564745196324,
+   "px_auroc": 0.7193228820831769,
+   "aupro": 0.3286693824326919,
+   "cat": "grid",
+   "method": "Gabor-Gaussian",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.8028404344193818,
+   "px_auroc": 0.6156502644573897,
+   "aupro": 0.33145748551468696,
+   "cat": "grid",
+   "method": "Gabor-Gaussian",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.6190476190476191,
+   "px_auroc": 0.6995214899831016,
+   "aupro": 0.3008796250899551,
+   "cat": "grid",
+   "method": "Gabor-Gaussian",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.44778613199665834,
+   "px_auroc": 0.6445584046603842,
+   "aupro": 0.3205235168535597,
+   "cat": "grid",
+   "method": "Gabor-Gaussian",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.83375104427736,
+   "px_auroc": 0.8628684176895569,
+   "aupro": 0.6721487769570084,
+   "cat": "grid",
+   "method": "PatchCore-lite",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.8178780284043443,
+   "px_auroc": 0.8670079439968863,
+   "aupro": 0.6739578873891314,
+   "cat": "grid",
+   "method": "PatchCore-lite",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.8471177944862156,
+   "px_auroc": 0.8344431378484464,
+   "aupro": 0.6148832505797984,
+   "cat": "grid",
+   "method": "PatchCore-lite",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.5480367585630743,
+   "px_auroc": 0.6650029087231435,
+   "aupro": 0.2040797248147338,
+   "cat": "grid",
+   "method": "PatchCore-lite",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.5873015873015872,
+   "px_auroc": 0.6719285837674238,
+   "aupro": 0.3262703108838146,
+   "cat": "grid",
+   "method": "PatchCore-lite",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.7794486215538847,
+   "px_auroc": 0.7730485386219318,
+   "aupro": 0.5125847741236927,
+   "cat": "grid",
+   "method": "PaDiM",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.7259816207184628,
+   "px_auroc": 0.7858988014979561,
+   "aupro": 0.5221488230774577,
+   "cat": "grid",
+   "method": "PaDiM",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.808688387635756,
+   "px_auroc": 0.7458269039632001,
+   "aupro": 0.47983251329304305,
+   "cat": "grid",
+   "method": "PaDiM",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.6524644945697577,
+   "px_auroc": 0.7004785498373342,
+   "aupro": 0.3627704555110707,
+   "cat": "grid",
+   "method": "PaDiM",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.5898078529657477,
+   "px_auroc": 0.6494409456931751,
+   "aupro": 0.30916839426503606,
+   "cat": "grid",
+   "method": "PaDiM",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9860733695652174,
+   "px_auroc": 0.9937078145318539,
+   "aupro": 0.9836911412407731,
+   "cat": "leather",
+   "method": "Gabor-Gaussian",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.990828804347826,
+   "px_auroc": 0.9878771827564659,
+   "aupro": 0.981724450352499,
+   "cat": "leather",
+   "method": "Gabor-Gaussian",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9809782608695652,
+   "px_auroc": 0.9931034505825778,
+   "aupro": 0.9178852429503125,
+   "cat": "leather",
+   "method": "Gabor-Gaussian",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9507472826086957,
+   "px_auroc": 0.9668639846693117,
+   "aupro": 0.8922567170299888,
+   "cat": "leather",
+   "method": "Gabor-Gaussian",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.8362771739130435,
+   "px_auroc": 0.7812236136458729,
+   "aupro": 0.5256845224981408,
+   "cat": "leather",
+   "method": "Gabor-Gaussian",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 1.0,
+   "px_auroc": 0.9921621168216367,
+   "aupro": 0.9475659714777,
+   "cat": "leather",
+   "method": "PatchCore-lite",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 1.0,
+   "px_auroc": 0.9923897057057245,
+   "aupro": 0.9744392437618357,
+   "cat": "leather",
+   "method": "PatchCore-lite",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 1.0,
+   "px_auroc": 0.9920842923709549,
+   "aupro": 0.9729883721119503,
+   "cat": "leather",
+   "method": "PatchCore-lite",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 1.0,
+   "px_auroc": 0.9890061039011031,
+   "aupro": 0.9767277535368593,
+   "cat": "leather",
+   "method": "PatchCore-lite",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 1.0,
+   "px_auroc": 0.9909839842832608,
+   "aupro": 0.9492145875150493,
+   "cat": "leather",
+   "method": "PatchCore-lite",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9836956521739131,
+   "px_auroc": 0.9919022218522788,
+   "aupro": 0.9506188723405745,
+   "cat": "leather",
+   "method": "PaDiM",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9891304347826086,
+   "px_auroc": 0.9919392396096238,
+   "aupro": 0.9799548303514063,
+   "cat": "leather",
+   "method": "PaDiM",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9704483695652174,
+   "px_auroc": 0.9916138894964522,
+   "aupro": 0.9768808218412245,
+   "cat": "leather",
+   "method": "PaDiM",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9164402173913044,
+   "px_auroc": 0.9863020756057508,
+   "aupro": 0.9578488481918407,
+   "cat": "leather",
+   "method": "PaDiM",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9480298913043478,
+   "px_auroc": 0.9884624464387666,
+   "aupro": 0.9555163138408409,
+   "cat": "leather",
+   "method": "PaDiM",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9090909090909092,
+   "px_auroc": 0.9329214435358497,
+   "aupro": 0.7897079301257738,
+   "cat": "tile",
+   "method": "Gabor-Gaussian",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9675324675324675,
+   "px_auroc": 0.9350174544179349,
+   "aupro": 0.7744983882512538,
+   "cat": "tile",
+   "method": "Gabor-Gaussian",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.8654401154401153,
+   "px_auroc": 0.8870347552462221,
+   "aupro": 0.6732084927179425,
+   "cat": "tile",
+   "method": "Gabor-Gaussian",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.7781385281385281,
+   "px_auroc": 0.9199420912594276,
+   "aupro": 0.6026561688493586,
+   "cat": "tile",
+   "method": "Gabor-Gaussian",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.8048340548340548,
+   "px_auroc": 0.7331154919883637,
+   "aupro": 0.5061797115163823,
+   "cat": "tile",
+   "method": "Gabor-Gaussian",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9917027417027418,
+   "px_auroc": 0.9430269161975066,
+   "aupro": 0.8327909896002871,
+   "cat": "tile",
+   "method": "PatchCore-lite",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9888167388167388,
+   "px_auroc": 0.9411388581911753,
+   "aupro": 0.8155238898013629,
+   "cat": "tile",
+   "method": "PatchCore-lite",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9909812409812411,
+   "px_auroc": 0.9437175571124935,
+   "aupro": 0.8362455081396857,
+   "cat": "tile",
+   "method": "PatchCore-lite",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9199134199134199,
+   "px_auroc": 0.912367721461353,
+   "aupro": 0.6533138507677781,
+   "cat": "tile",
+   "method": "PatchCore-lite",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9978354978354977,
+   "px_auroc": 0.9314803840186097,
+   "aupro": 0.793880570075487,
+   "cat": "tile",
+   "method": "PatchCore-lite",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.84992784992785,
+   "px_auroc": 0.853215298224436,
+   "aupro": 0.6719729290534775,
+   "cat": "tile",
+   "method": "PaDiM",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.8336940836940838,
+   "px_auroc": 0.8401487725994488,
+   "aupro": 0.6515079452995156,
+   "cat": "tile",
+   "method": "PaDiM",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.8535353535353537,
+   "px_auroc": 0.8539686277741626,
+   "aupro": 0.6772948114527609,
+   "cat": "tile",
+   "method": "PaDiM",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.5656565656565657,
+   "px_auroc": 0.7389641348794584,
+   "aupro": 0.3878611233323346,
+   "cat": "tile",
+   "method": "PaDiM",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.8650793650793651,
+   "px_auroc": 0.8251734240383208,
+   "aupro": 0.6407528176429991,
+   "cat": "tile",
+   "method": "PaDiM",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9780701754385965,
+   "px_auroc": 0.9354935094084147,
+   "aupro": 0.8862889725819928,
+   "cat": "wood",
+   "method": "Gabor-Gaussian",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9780701754385965,
+   "px_auroc": 0.9337395346856484,
+   "aupro": 0.888048358110868,
+   "cat": "wood",
+   "method": "Gabor-Gaussian",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9798245614035088,
+   "px_auroc": 0.9215717801019504,
+   "aupro": 0.8719622659609977,
+   "cat": "wood",
+   "method": "Gabor-Gaussian",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9763157894736842,
+   "px_auroc": 0.9054489565471225,
+   "aupro": 0.7331055859739646,
+   "cat": "wood",
+   "method": "Gabor-Gaussian",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9421052631578948,
+   "px_auroc": 0.8722765481073613,
+   "aupro": 0.745558550477911,
+   "cat": "wood",
+   "method": "Gabor-Gaussian",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9912280701754386,
+   "px_auroc": 0.9278373818585148,
+   "aupro": 0.881391584380956,
+   "cat": "wood",
+   "method": "PatchCore-lite",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9921052631578948,
+   "px_auroc": 0.9222228262951344,
+   "aupro": 0.8793408297510674,
+   "cat": "wood",
+   "method": "PatchCore-lite",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9868421052631579,
+   "px_auroc": 0.9275974846830095,
+   "aupro": 0.878136439342016,
+   "cat": "wood",
+   "method": "PatchCore-lite",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9649122807017543,
+   "px_auroc": 0.8912232220485078,
+   "aupro": 0.7318069399792325,
+   "cat": "wood",
+   "method": "PatchCore-lite",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9964912280701754,
+   "px_auroc": 0.8902267860872689,
+   "aupro": 0.8045447123667586,
+   "cat": "wood",
+   "method": "PatchCore-lite",
+   "perturb": "noise(s=10)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9877192982456141,
+   "px_auroc": 0.9321575997281973,
+   "aupro": 0.9097777030250886,
+   "cat": "wood",
+   "method": "PaDiM",
+   "perturb": "none",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9894736842105263,
+   "px_auroc": 0.9255018644263666,
+   "aupro": 0.9067517252522678,
+   "cat": "wood",
+   "method": "PaDiM",
+   "perturb": "bright-20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9807017543859649,
+   "px_auroc": 0.931029183930438,
+   "aupro": 0.907296816924002,
+   "cat": "wood",
+   "method": "PaDiM",
+   "perturb": "bright+20%",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9614035087719298,
+   "px_auroc": 0.8544852474604478,
+   "aupro": 0.7362770733536782,
+   "cat": "wood",
+   "method": "PaDiM",
+   "perturb": "blur(s=2)",
+   "k": 20
+  },
+  {
+   "img_auroc": 0.9640350877192982,
+   "px_auroc": 0.8901466953369913,
+   "aupro": 0.8122535063146173,
+   "cat": "wood",
+   "method": "PaDiM",
+   "perturb": "noise(s=10)",
+   "k": 20
+  }
+ ],
+ "ablation": [
+  {
+   "img_auroc": 0.7311396468699839,
+   "px_auroc": 0.8894664775949748,
+   "aupro": 0.6418456635346873,
+   "cat": "carpet",
+   "variant": "full (L + Lab chroma + Gabor mean/std)",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.6966292134831461,
+   "px_auroc": 0.8876555321580557,
+   "aupro": 0.5738928039076859,
+   "cat": "carpet",
+   "variant": "w/o chroma (grey only)",
+   "k": 20,
+   "dim": 26
+  },
+  {
+   "img_auroc": 0.7399678972712681,
+   "px_auroc": 0.8869141149783716,
+   "aupro": 0.6393238548140499,
+   "cat": "carpet",
+   "variant": "w/o Gabor std",
+   "k": 20,
+   "dim": 18
+  },
+  {
+   "img_auroc": 0.6047351524879615,
+   "px_auroc": 0.7027794360892186,
+   "aupro": 0.4050142942736148,
+   "cat": "carpet",
+   "variant": "w/o Gabor (intensity + chroma stats only)",
+   "k": 20,
+   "dim": 6
+  },
+  {
+   "img_auroc": 0.8162118780096308,
+   "px_auroc": 0.9181665345361761,
+   "aupro": 0.7485591564490277,
+   "cat": "carpet",
+   "variant": "6 orientations",
+   "k": 20,
+   "dim": 42
+  },
+  {
+   "img_auroc": 0.7845104333868379,
+   "px_auroc": 0.8913123752577786,
+   "aupro": 0.7048677536750204,
+   "cat": "carpet",
+   "variant": "pool 9 px",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.6761637239165329,
+   "px_auroc": 0.8718343773383717,
+   "aupro": 0.5358027428250055,
+   "cat": "carpet",
+   "variant": "pool 25 px",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.7552213868003341,
+   "px_auroc": 0.6897721910427158,
+   "aupro": 0.33781624642892094,
+   "cat": "grid",
+   "variant": "full (L + Lab chroma + Gabor mean/std)",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.7535505430242273,
+   "px_auroc": 0.687602591691329,
+   "aupro": 0.33458538679036254,
+   "cat": "grid",
+   "variant": "w/o chroma (grey only)",
+   "k": 20,
+   "dim": 26
+  },
+  {
+   "img_auroc": 0.7468671679197996,
+   "px_auroc": 0.6204099680393108,
+   "aupro": 0.2801805307024064,
+   "cat": "grid",
+   "variant": "w/o Gabor std",
+   "k": 20,
+   "dim": 18
+  },
+  {
+   "img_auroc": 0.6850459482038429,
+   "px_auroc": 0.641998940498633,
+   "aupro": 0.2781392534823567,
+   "cat": "grid",
+   "variant": "w/o Gabor (intensity + chroma stats only)",
+   "k": 20,
+   "dim": 6
+  },
+  {
+   "img_auroc": 0.731829573934837,
+   "px_auroc": 0.6969652149411567,
+   "aupro": 0.34341892728094237,
+   "cat": "grid",
+   "variant": "6 orientations",
+   "k": 20,
+   "dim": 42
+  },
+  {
+   "img_auroc": 0.8020050125313283,
+   "px_auroc": 0.5985475970784777,
+   "aupro": 0.27155606541613536,
+   "cat": "grid",
+   "variant": "pool 9 px",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.7042606516290727,
+   "px_auroc": 0.7481467106759369,
+   "aupro": 0.3837816555271428,
+   "cat": "grid",
+   "variant": "pool 25 px",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.9860733695652174,
+   "px_auroc": 0.9937078145318539,
+   "aupro": 0.9836911412407731,
+   "cat": "leather",
+   "variant": "full (L + Lab chroma + Gabor mean/std)",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.9504076086956521,
+   "px_auroc": 0.9916603770802942,
+   "aupro": 0.9758864568495084,
+   "cat": "leather",
+   "variant": "w/o chroma (grey only)",
+   "k": 20,
+   "dim": 26
+  },
+  {
+   "img_auroc": 0.9877717391304348,
+   "px_auroc": 0.9928585968985559,
+   "aupro": 0.9854389564989271,
+   "cat": "leather",
+   "variant": "w/o Gabor std",
+   "k": 20,
+   "dim": 18
+  },
+  {
+   "img_auroc": 0.9870923913043478,
+   "px_auroc": 0.9810554787661695,
+   "aupro": 0.9773873692946358,
+   "cat": "leather",
+   "variant": "w/o Gabor (intensity + chroma stats only)",
+   "k": 20,
+   "dim": 6
+  },
+  {
+   "img_auroc": 0.9884510869565217,
+   "px_auroc": 0.9938987213964309,
+   "aupro": 0.9087791027316019,
+   "cat": "leather",
+   "variant": "6 orientations",
+   "k": 20,
+   "dim": 42
+  },
+  {
+   "img_auroc": 0.9877717391304348,
+   "px_auroc": 0.9921580261945195,
+   "aupro": 0.9127479203195721,
+   "cat": "leather",
+   "variant": "pool 9 px",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.9758831521739131,
+   "px_auroc": 0.9941296772686616,
+   "aupro": 0.9759364878678666,
+   "cat": "leather",
+   "variant": "pool 25 px",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.9090909090909092,
+   "px_auroc": 0.9329214435358497,
+   "aupro": 0.7897079301257738,
+   "cat": "tile",
+   "variant": "full (L + Lab chroma + Gabor mean/std)",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.847041847041847,
+   "px_auroc": 0.7468849864602797,
+   "aupro": 0.6084300295459343,
+   "cat": "tile",
+   "variant": "w/o chroma (grey only)",
+   "k": 20,
+   "dim": 26
+  },
+  {
+   "img_auroc": 0.902958152958153,
+   "px_auroc": 0.9417333914484892,
+   "aupro": 0.7633852739484819,
+   "cat": "tile",
+   "variant": "w/o Gabor std",
+   "k": 20,
+   "dim": 18
+  },
+  {
+   "img_auroc": 0.902958152958153,
+   "px_auroc": 0.9444851159775054,
+   "aupro": 0.7224305422189514,
+   "cat": "tile",
+   "variant": "w/o Gabor (intensity + chroma stats only)",
+   "k": 20,
+   "dim": 6
+  },
+  {
+   "img_auroc": 0.9235209235209236,
+   "px_auroc": 0.9301210088240041,
+   "aupro": 0.7973722403880564,
+   "cat": "tile",
+   "variant": "6 orientations",
+   "k": 20,
+   "dim": 42
+  },
+  {
+   "img_auroc": 0.8968253968253967,
+   "px_auroc": 0.903026810081089,
+   "aupro": 0.7174510399667698,
+   "cat": "tile",
+   "variant": "pool 9 px",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.8993506493506493,
+   "px_auroc": 0.9496188370771486,
+   "aupro": 0.7951558013631074,
+   "cat": "tile",
+   "variant": "pool 25 px",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.9780701754385965,
+   "px_auroc": 0.9354935094084147,
+   "aupro": 0.8862889725819928,
+   "cat": "wood",
+   "variant": "full (L + Lab chroma + Gabor mean/std)",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.9649122807017544,
+   "px_auroc": 0.8961956243612187,
+   "aupro": 0.8227917306712574,
+   "cat": "wood",
+   "variant": "w/o chroma (grey only)",
+   "k": 20,
+   "dim": 26
+  },
+  {
+   "img_auroc": 0.9780701754385965,
+   "px_auroc": 0.9366225373075738,
+   "aupro": 0.8844955155887029,
+   "cat": "wood",
+   "variant": "w/o Gabor std",
+   "k": 20,
+   "dim": 18
+  },
+  {
+   "img_auroc": 0.986842105263158,
+   "px_auroc": 0.8738833287571937,
+   "aupro": 0.7148801182525559,
+   "cat": "wood",
+   "variant": "w/o Gabor (intensity + chroma stats only)",
+   "k": 20,
+   "dim": 6
+  },
+  {
+   "img_auroc": 0.9780701754385965,
+   "px_auroc": 0.935255444627171,
+   "aupro": 0.8814735145140679,
+   "cat": "wood",
+   "variant": "6 orientations",
+   "k": 20,
+   "dim": 42
+  },
+  {
+   "img_auroc": 0.981578947368421,
+   "px_auroc": 0.9296879127959846,
+   "aupro": 0.8846425374187167,
+   "cat": "wood",
+   "variant": "pool 9 px",
+   "k": 20,
+   "dim": 30
+  },
+  {
+   "img_auroc": 0.9807017543859649,
+   "px_auroc": 0.9351285960903354,
+   "aupro": 0.8679334083794654,
+   "cat": "wood",
+   "variant": "pool 25 px",
+   "k": 20,
+   "dim": 30
+  }
+ ],
+ "latency": [
+  {
+   "method": "Gabor-Gaussian",
+   "threads": 8,
+   "k": 20,
+   "fit_s": 0.8434983000000003,
+   "ms_median": 39.05440000000038,
+   "ms_p95": 41.494194999999806,
+   "model_state_MB": 0.00744,
+   "backbone_MB": 0.0
+  },
+  {
+   "method": "PatchCore-lite",
+   "threads": 8,
+   "k": 20,
+   "fit_s": 2.1035560999999987,
+   "ms_median": 20.436150000000097,
+   "ms_p95": 34.33333500000026,
+   "model_state_MB": 3.145728,
+   "backbone_MB": 44.72
+  },
+  {
+   "method": "PaDiM",
+   "threads": 8,
+   "k": 20,
+   "fit_s": 0.9287566999999992,
+   "ms_median": 26.39960000000041,
+   "ms_p95": 36.35948500000019,
+   "model_state_MB": 165.4784,
+   "backbone_MB": 44.72
+  },
+  {
+   "method": "Gabor-Gaussian",
+   "threads": 2,
+   "k": 20,
+   "fit_s": 0.6804848999999997,
+   "ms_median": 36.50390000000048,
+   "ms_p95": 39.46623499999973,
+   "model_state_MB": 0.00744,
+   "backbone_MB": 0.0
+  },
+  {
+   "method": "PatchCore-lite",
+   "threads": 2,
+   "k": 20,
+   "fit_s": 0.5258664999999993,
+   "ms_median": 39.41995000000098,
+   "ms_p95": 41.14998000000005,
+   "model_state_MB": 3.145728,
+   "backbone_MB": 44.72
+  },
+  {
+   "method": "PaDiM",
+   "threads": 2,
+   "k": 20,
+   "fit_s": 1.1142560999999986,
+   "ms_median": 41.23515000000033,
+   "ms_p95": 42.58854500000098,
+   "model_state_MB": 165.4784,
+   "backbone_MB": 44.72
+  }
+ ]
+}

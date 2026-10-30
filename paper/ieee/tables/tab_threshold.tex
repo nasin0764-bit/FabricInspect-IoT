@@ -1,0 +1,24 @@
+\begin{table}[t]
+\centering
+\caption{Decisions with the label-free LOO threshold (\ref{eq:tau}); mean over five categories and three draws. FPR: false alarms on good test images.}
+\label{tab:threshold}
+\footnotesize
+\begin{tabular}{@{}lcccccc@{}}
+\toprule
+Model & $k$ & $m$ & FPR & Recall & Prec. & F1 \\
+\midrule
+GG (station) & 10 & 0.0 & 0.335 & 0.670 & 0.901 & 0.693 \\
+ & 10 & 0.1 & 0.282 & 0.624 & 0.777 & 0.659 \\
+ & 10 & 0.2 & 0.225 & 0.577 & 0.797 & 0.624 \\
+ & 10 & 0.3 & 0.180 & 0.541 & 0.814 & 0.593 \\
+ & 5 & 0.1 & 0.176 & 0.569 & 0.816 & 0.617 \\
+ & 20 & 0.1 & 0.206 & 0.602 & 0.800 & 0.645 \\ \midrule
+PC (edge) & 10 & 0.0 & 0.245 & 0.788 & 0.851 & 0.778 \\
+ & 10 & 0.1 & 0.034 & 0.718 & 0.855 & 0.753 \\
+ & 10 & 0.2 & 0.000 & 0.653 & 0.800 & 0.713 \\
+ & 10 & 0.3 & 0.000 & 0.573 & 0.800 & 0.653 \\
+ & 5 & 0.1 & 0.071 & 0.734 & 0.812 & 0.755 \\
+ & 20 & 0.1 & 0.025 & 0.722 & 0.858 & 0.754 \\
+\bottomrule
+\end{tabular}
+\end{table}

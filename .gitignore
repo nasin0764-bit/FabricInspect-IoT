@@ -1,0 +1,30 @@
+# dataset (MVTec AD is CC BY-NC-SA 4.0 - download it yourself, see README)
+data/
+
+# third-party binaries
+tools/mosquitto/
+tools/mosquitto-setup.exe
+
+# timing runs invalidated by host throttling (kept locally for the record)
+results/*INVALID*.json
+results/*_run1_*.json
+results/*_run2_*.json
+results/*_balanced_mode.json
+results/*_morning_state.json
+results/mosquitto_*.conf
+results/log_*.txt
+
+# python / editors
+__pycache__/
+*.pyc
+.pytest_cache/
+.vscode/
+.idea/
+
+# LaTeX build artefacts
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.synctex.gz

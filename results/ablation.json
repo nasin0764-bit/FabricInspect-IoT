@@ -1,0 +1,317 @@
+[
+ {
+  "img_auroc": 0.7311396468699839,
+  "px_auroc": 0.8894664775949748,
+  "aupro": 0.6418456635346873,
+  "cat": "carpet",
+  "variant": "full (L + Lab chroma + Gabor mean/std)",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.6966292134831461,
+  "px_auroc": 0.8876555321580557,
+  "aupro": 0.5738928039076859,
+  "cat": "carpet",
+  "variant": "w/o chroma (grey only)",
+  "k": 20,
+  "dim": 26
+ },
+ {
+  "img_auroc": 0.7399678972712681,
+  "px_auroc": 0.8869141149783716,
+  "aupro": 0.6393238548140499,
+  "cat": "carpet",
+  "variant": "w/o Gabor std",
+  "k": 20,
+  "dim": 18
+ },
+ {
+  "img_auroc": 0.6047351524879615,
+  "px_auroc": 0.7027794360892186,
+  "aupro": 0.4050142942736148,
+  "cat": "carpet",
+  "variant": "w/o Gabor (intensity + chroma stats only)",
+  "k": 20,
+  "dim": 6
+ },
+ {
+  "img_auroc": 0.8162118780096308,
+  "px_auroc": 0.9181665345361761,
+  "aupro": 0.7485591564490277,
+  "cat": "carpet",
+  "variant": "6 orientations",
+  "k": 20,
+  "dim": 42
+ },
+ {
+  "img_auroc": 0.7845104333868379,
+  "px_auroc": 0.8913123752577786,
+  "aupro": 0.7048677536750204,
+  "cat": "carpet",
+  "variant": "pool 9 px",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.6761637239165329,
+  "px_auroc": 0.8718343773383717,
+  "aupro": 0.5358027428250055,
+  "cat": "carpet",
+  "variant": "pool 25 px",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.7552213868003341,
+  "px_auroc": 0.6897721910427158,
+  "aupro": 0.33781624642892094,
+  "cat": "grid",
+  "variant": "full (L + Lab chroma + Gabor mean/std)",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.7535505430242273,
+  "px_auroc": 0.687602591691329,
+  "aupro": 0.33458538679036254,
+  "cat": "grid",
+  "variant": "w/o chroma (grey only)",
+  "k": 20,
+  "dim": 26
+ },
+ {
+  "img_auroc": 0.7468671679197996,
+  "px_auroc": 0.6204099680393108,
+  "aupro": 0.2801805307024064,
+  "cat": "grid",
+  "variant": "w/o Gabor std",
+  "k": 20,
+  "dim": 18
+ },
+ {
+  "img_auroc": 0.6850459482038429,
+  "px_auroc": 0.641998940498633,
+  "aupro": 0.2781392534823567,
+  "cat": "grid",
+  "variant": "w/o Gabor (intensity + chroma stats only)",
+  "k": 20,
+  "dim": 6
+ },
+ {
+  "img_auroc": 0.731829573934837,
+  "px_auroc": 0.6969652149411567,
+  "aupro": 0.34341892728094237,
+  "cat": "grid",
+  "variant": "6 orientations",
+  "k": 20,
+  "dim": 42
+ },
+ {
+  "img_auroc": 0.8020050125313283,
+  "px_auroc": 0.5985475970784777,
+  "aupro": 0.27155606541613536,
+  "cat": "grid",
+  "variant": "pool 9 px",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.7042606516290727,
+  "px_auroc": 0.7481467106759369,
+  "aupro": 0.3837816555271428,
+  "cat": "grid",
+  "variant": "pool 25 px",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.9860733695652174,
+  "px_auroc": 0.9937078145318539,
+  "aupro": 0.9836911412407731,
+  "cat": "leather",
+  "variant": "full (L + Lab chroma + Gabor mean/std)",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.9504076086956521,
+  "px_auroc": 0.9916603770802942,
+  "aupro": 0.9758864568495084,
+  "cat": "leather",
+  "variant": "w/o chroma (grey only)",
+  "k": 20,
+  "dim": 26
+ },
+ {
+  "img_auroc": 0.9877717391304348,
+  "px_auroc": 0.9928585968985559,
+  "aupro": 0.9854389564989271,
+  "cat": "leather",
+  "variant": "w/o Gabor std",
+  "k": 20,
+  "dim": 18
+ },
+ {
+  "img_auroc": 0.9870923913043478,
+  "px_auroc": 0.9810554787661695,
+  "aupro": 0.9773873692946358,
+  "cat": "leather",
+  "variant": "w/o Gabor (intensity + chroma stats only)",
+  "k": 20,
+  "dim": 6
+ },
+ {
+  "img_auroc": 0.9884510869565217,
+  "px_auroc": 0.9938987213964309,
+  "aupro": 0.9087791027316019,
+  "cat": "leather",
+  "variant": "6 orientations",
+  "k": 20,
+  "dim": 42
+ },
+ {
+  "img_auroc": 0.9877717391304348,
+  "px_auroc": 0.9921580261945195,
+  "aupro": 0.9127479203195721,
+  "cat": "leather",
+  "variant": "pool 9 px",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.9758831521739131,
+  "px_auroc": 0.9941296772686616,
+  "aupro": 0.9759364878678666,
+  "cat": "leather",
+  "variant": "pool 25 px",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.9090909090909092,
+  "px_auroc": 0.9329214435358497,
+  "aupro": 0.7897079301257738,
+  "cat": "tile",
+  "variant": "full (L + Lab chroma + Gabor mean/std)",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.847041847041847,
+  "px_auroc": 0.7468849864602797,
+  "aupro": 0.6084300295459343,
+  "cat": "tile",
+  "variant": "w/o chroma (grey only)",
+  "k": 20,
+  "dim": 26
+ },
+ {
+  "img_auroc": 0.902958152958153,
+  "px_auroc": 0.9417333914484892,
+  "aupro": 0.7633852739484819,
+  "cat": "tile",
+  "variant": "w/o Gabor std",
+  "k": 20,
+  "dim": 18
+ },
+ {
+  "img_auroc": 0.902958152958153,
+  "px_auroc": 0.9444851159775054,
+  "aupro": 0.7224305422189514,
+  "cat": "tile",
+  "variant": "w/o Gabor (intensity + chroma stats only)",
+  "k": 20,
+  "dim": 6
+ },
+ {
+  "img_auroc": 0.9235209235209236,
+  "px_auroc": 0.9301210088240041,
+  "aupro": 0.7973722403880564,
+  "cat": "tile",
+  "variant": "6 orientations",
+  "k": 20,
+  "dim": 42
+ },
+ {
+  "img_auroc": 0.8968253968253967,
+  "px_auroc": 0.903026810081089,
+  "aupro": 0.7174510399667698,
+  "cat": "tile",
+  "variant": "pool 9 px",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.8993506493506493,
+  "px_auroc": 0.9496188370771486,
+  "aupro": 0.7951558013631074,
+  "cat": "tile",
+  "variant": "pool 25 px",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.9780701754385965,
+  "px_auroc": 0.9354935094084147,
+  "aupro": 0.8862889725819928,
+  "cat": "wood",
+  "variant": "full (L + Lab chroma + Gabor mean/std)",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.9649122807017544,
+  "px_auroc": 0.8961956243612187,
+  "aupro": 0.8227917306712574,
+  "cat": "wood",
+  "variant": "w/o chroma (grey only)",
+  "k": 20,
+  "dim": 26
+ },
+ {
+  "img_auroc": 0.9780701754385965,
+  "px_auroc": 0.9366225373075738,
+  "aupro": 0.8844955155887029,
+  "cat": "wood",
+  "variant": "w/o Gabor std",
+  "k": 20,
+  "dim": 18
+ },
+ {
+  "img_auroc": 0.986842105263158,
+  "px_auroc": 0.8738833287571937,
+  "aupro": 0.7148801182525559,
+  "cat": "wood",
+  "variant": "w/o Gabor (intensity + chroma stats only)",
+  "k": 20,
+  "dim": 6
+ },
+ {
+  "img_auroc": 0.9780701754385965,
+  "px_auroc": 0.935255444627171,
+  "aupro": 0.8814735145140679,
+  "cat": "wood",
+  "variant": "6 orientations",
+  "k": 20,
+  "dim": 42
+ },
+ {
+  "img_auroc": 0.981578947368421,
+  "px_auroc": 0.9296879127959846,
+  "aupro": 0.8846425374187167,
+  "cat": "wood",
+  "variant": "pool 9 px",
+  "k": 20,
+  "dim": 30
+ },
+ {
+  "img_auroc": 0.9807017543859649,
+  "px_auroc": 0.9351285960903354,
+  "aupro": 0.8679334083794654,
+  "cat": "wood",
+  "variant": "pool 25 px",
+  "k": 20,
+  "dim": 30
+ }
+]

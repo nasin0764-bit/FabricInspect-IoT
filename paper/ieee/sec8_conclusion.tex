@@ -1,0 +1,13 @@
+\section{Conclusion}\label{sec:conclusion}
+We presented FabricInspect-IoT, a few-shot, label-free fabric inspection service for networked seaming stations, and characterised it as an IIoT system. A fabric is learned from ten defect-free frames in about a second; a 6\,kB station model and a ResNet-18 nearest-neighbour edge model are fitted together, and both obtain their decision thresholds by leave-one-out scoring of the shots, without any defect example. With these thresholds, the edge model reaches F1 0.935 at 4.3\,\% false alarms on four of five MVTec~AD textures, while the fifth (grid) exposes the limits of ten-shot calibration. Confidence-gated offloading retains 99\,\% of the edge-only F1 while sending only half of the frames to the edge and lowers the station-only false-alarm rate from 28\,\% to 8\,\%; the gate adapts its offload rate to the fabric (23--81\,\%) using only the label-free thresholds. In a live deployment with a production MQTT broker, [TBD: live-system summary]. Retained MQTT messages distribute a new fabric model to any number of stations within 15\,ms on Wi-Fi.
+
+Future work will validate the system on images logged at the seaming machines, port the station model to the machines' Android controllers, add operator feedback to refine the LOO thresholds, and extend the gate to adapt $\alpha$ to the instantaneous edge load and uplink quality.
+
+\section*{Author Contributions}
+N.~Palvannazirova: conceptualization, methodology, software, investigation, data curation, writing---original draft preparation. A.~Waseem: software, formal analysis, validation, writing---review and editing. N.~Lobasevich: formal analysis, visualization, writing---review and editing. P.~Butovskiy: supervision, methodology, validation, writing---review and editing. M.~Allamov: investigation, resources, validation, writing---review and editing.
+
+\section*{Acknowledgment}
+[To be completed by the authors.]
+
+\section*{Use of AI-Assisted Tools}
+[To be completed by the authors, following IEEE's policy on AI-generated content: name the tool(s), the sections or code they assisted with, and confirm that the authors reviewed and take responsibility for all content.]

@@ -1,0 +1,677 @@
+[
+ {
+  "img_auroc": 0.7311396468699839,
+  "px_auroc": 0.8894664775949748,
+  "aupro": 0.6418456635346873,
+  "cat": "carpet",
+  "method": "Gabor-Gaussian",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.7640449438202247,
+  "px_auroc": 0.9051766189386453,
+  "aupro": 0.700929979205167,
+  "cat": "carpet",
+  "method": "Gabor-Gaussian",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.6918138041733548,
+  "px_auroc": 0.8551416118363537,
+  "aupro": 0.5898806101838465,
+  "cat": "carpet",
+  "method": "Gabor-Gaussian",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.5381219903691814,
+  "px_auroc": 0.6408911200363436,
+  "aupro": 0.36577792951241994,
+  "cat": "carpet",
+  "method": "Gabor-Gaussian",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.6873996789727127,
+  "px_auroc": 0.748635640759094,
+  "aupro": 0.5244425768524349,
+  "cat": "carpet",
+  "method": "Gabor-Gaussian",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9674959871589085,
+  "px_auroc": 0.9882501408923541,
+  "aupro": 0.9407282145848915,
+  "cat": "carpet",
+  "method": "PatchCore-lite",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9751203852327447,
+  "px_auroc": 0.9881278015058763,
+  "aupro": 0.9223824105333001,
+  "cat": "carpet",
+  "method": "PatchCore-lite",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.96107544141252,
+  "px_auroc": 0.9875194346478127,
+  "aupro": 0.9205141621501616,
+  "cat": "carpet",
+  "method": "PatchCore-lite",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9570626003210273,
+  "px_auroc": 0.9457588965207719,
+  "aupro": 0.8403719523886496,
+  "cat": "carpet",
+  "method": "PatchCore-lite",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9626805778491172,
+  "px_auroc": 0.9849505081176781,
+  "aupro": 0.9242746400286461,
+  "cat": "carpet",
+  "method": "PatchCore-lite",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9185393258426967,
+  "px_auroc": 0.9772968612376582,
+  "aupro": 0.9331784075130395,
+  "cat": "carpet",
+  "method": "PaDiM",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9353932584269663,
+  "px_auroc": 0.9786793764312801,
+  "aupro": 0.9354785689902028,
+  "cat": "carpet",
+  "method": "PaDiM",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9020866773675762,
+  "px_auroc": 0.9718392398557859,
+  "aupro": 0.9206467788319785,
+  "cat": "carpet",
+  "method": "PaDiM",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.8198234349919744,
+  "px_auroc": 0.898796191710642,
+  "aupro": 0.7691016443868864,
+  "cat": "carpet",
+  "method": "PaDiM",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.8820224719101123,
+  "px_auroc": 0.9682358382283559,
+  "aupro": 0.885279484506466,
+  "cat": "carpet",
+  "method": "PaDiM",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.7552213868003341,
+  "px_auroc": 0.6897721910427158,
+  "aupro": 0.33781624642892094,
+  "cat": "grid",
+  "method": "Gabor-Gaussian",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.692564745196324,
+  "px_auroc": 0.7193228820831769,
+  "aupro": 0.3286693824326919,
+  "cat": "grid",
+  "method": "Gabor-Gaussian",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.8028404344193818,
+  "px_auroc": 0.6156502644573897,
+  "aupro": 0.33145748551468696,
+  "cat": "grid",
+  "method": "Gabor-Gaussian",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.6190476190476191,
+  "px_auroc": 0.6995214899831016,
+  "aupro": 0.3008796250899551,
+  "cat": "grid",
+  "method": "Gabor-Gaussian",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.44778613199665834,
+  "px_auroc": 0.6445584046603842,
+  "aupro": 0.3205235168535597,
+  "cat": "grid",
+  "method": "Gabor-Gaussian",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.83375104427736,
+  "px_auroc": 0.8628684176895569,
+  "aupro": 0.6721487769570084,
+  "cat": "grid",
+  "method": "PatchCore-lite",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.8178780284043443,
+  "px_auroc": 0.8670079439968863,
+  "aupro": 0.6739578873891314,
+  "cat": "grid",
+  "method": "PatchCore-lite",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.8471177944862156,
+  "px_auroc": 0.8344431378484464,
+  "aupro": 0.6148832505797984,
+  "cat": "grid",
+  "method": "PatchCore-lite",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.5480367585630743,
+  "px_auroc": 0.6650029087231435,
+  "aupro": 0.2040797248147338,
+  "cat": "grid",
+  "method": "PatchCore-lite",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.5873015873015872,
+  "px_auroc": 0.6719285837674238,
+  "aupro": 0.3262703108838146,
+  "cat": "grid",
+  "method": "PatchCore-lite",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.7794486215538847,
+  "px_auroc": 0.7730485386219318,
+  "aupro": 0.5125847741236927,
+  "cat": "grid",
+  "method": "PaDiM",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.7259816207184628,
+  "px_auroc": 0.7858988014979561,
+  "aupro": 0.5221488230774577,
+  "cat": "grid",
+  "method": "PaDiM",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.808688387635756,
+  "px_auroc": 0.7458269039632001,
+  "aupro": 0.47983251329304305,
+  "cat": "grid",
+  "method": "PaDiM",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.6524644945697577,
+  "px_auroc": 0.7004785498373342,
+  "aupro": 0.3627704555110707,
+  "cat": "grid",
+  "method": "PaDiM",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.5898078529657477,
+  "px_auroc": 0.6494409456931751,
+  "aupro": 0.30916839426503606,
+  "cat": "grid",
+  "method": "PaDiM",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9860733695652174,
+  "px_auroc": 0.9937078145318539,
+  "aupro": 0.9836911412407731,
+  "cat": "leather",
+  "method": "Gabor-Gaussian",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.990828804347826,
+  "px_auroc": 0.9878771827564659,
+  "aupro": 0.981724450352499,
+  "cat": "leather",
+  "method": "Gabor-Gaussian",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9809782608695652,
+  "px_auroc": 0.9931034505825778,
+  "aupro": 0.9178852429503125,
+  "cat": "leather",
+  "method": "Gabor-Gaussian",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9507472826086957,
+  "px_auroc": 0.9668639846693117,
+  "aupro": 0.8922567170299888,
+  "cat": "leather",
+  "method": "Gabor-Gaussian",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.8362771739130435,
+  "px_auroc": 0.7812236136458729,
+  "aupro": 0.5256845224981408,
+  "cat": "leather",
+  "method": "Gabor-Gaussian",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 1.0,
+  "px_auroc": 0.9921621168216367,
+  "aupro": 0.9475659714777,
+  "cat": "leather",
+  "method": "PatchCore-lite",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 1.0,
+  "px_auroc": 0.9923897057057245,
+  "aupro": 0.9744392437618357,
+  "cat": "leather",
+  "method": "PatchCore-lite",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 1.0,
+  "px_auroc": 0.9920842923709549,
+  "aupro": 0.9729883721119503,
+  "cat": "leather",
+  "method": "PatchCore-lite",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 1.0,
+  "px_auroc": 0.9890061039011031,
+  "aupro": 0.9767277535368593,
+  "cat": "leather",
+  "method": "PatchCore-lite",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 1.0,
+  "px_auroc": 0.9909839842832608,
+  "aupro": 0.9492145875150493,
+  "cat": "leather",
+  "method": "PatchCore-lite",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9836956521739131,
+  "px_auroc": 0.9919022218522788,
+  "aupro": 0.9506188723405745,
+  "cat": "leather",
+  "method": "PaDiM",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9891304347826086,
+  "px_auroc": 0.9919392396096238,
+  "aupro": 0.9799548303514063,
+  "cat": "leather",
+  "method": "PaDiM",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9704483695652174,
+  "px_auroc": 0.9916138894964522,
+  "aupro": 0.9768808218412245,
+  "cat": "leather",
+  "method": "PaDiM",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9164402173913044,
+  "px_auroc": 0.9863020756057508,
+  "aupro": 0.9578488481918407,
+  "cat": "leather",
+  "method": "PaDiM",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9480298913043478,
+  "px_auroc": 0.9884624464387666,
+  "aupro": 0.9555163138408409,
+  "cat": "leather",
+  "method": "PaDiM",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9090909090909092,
+  "px_auroc": 0.9329214435358497,
+  "aupro": 0.7897079301257738,
+  "cat": "tile",
+  "method": "Gabor-Gaussian",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9675324675324675,
+  "px_auroc": 0.9350174544179349,
+  "aupro": 0.7744983882512538,
+  "cat": "tile",
+  "method": "Gabor-Gaussian",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.8654401154401153,
+  "px_auroc": 0.8870347552462221,
+  "aupro": 0.6732084927179425,
+  "cat": "tile",
+  "method": "Gabor-Gaussian",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.7781385281385281,
+  "px_auroc": 0.9199420912594276,
+  "aupro": 0.6026561688493586,
+  "cat": "tile",
+  "method": "Gabor-Gaussian",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.8048340548340548,
+  "px_auroc": 0.7331154919883637,
+  "aupro": 0.5061797115163823,
+  "cat": "tile",
+  "method": "Gabor-Gaussian",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9917027417027418,
+  "px_auroc": 0.9430269161975066,
+  "aupro": 0.8327909896002871,
+  "cat": "tile",
+  "method": "PatchCore-lite",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9888167388167388,
+  "px_auroc": 0.9411388581911753,
+  "aupro": 0.8155238898013629,
+  "cat": "tile",
+  "method": "PatchCore-lite",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9909812409812411,
+  "px_auroc": 0.9437175571124935,
+  "aupro": 0.8362455081396857,
+  "cat": "tile",
+  "method": "PatchCore-lite",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9199134199134199,
+  "px_auroc": 0.912367721461353,
+  "aupro": 0.6533138507677781,
+  "cat": "tile",
+  "method": "PatchCore-lite",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9978354978354977,
+  "px_auroc": 0.9314803840186097,
+  "aupro": 0.793880570075487,
+  "cat": "tile",
+  "method": "PatchCore-lite",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.84992784992785,
+  "px_auroc": 0.853215298224436,
+  "aupro": 0.6719729290534775,
+  "cat": "tile",
+  "method": "PaDiM",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.8336940836940838,
+  "px_auroc": 0.8401487725994488,
+  "aupro": 0.6515079452995156,
+  "cat": "tile",
+  "method": "PaDiM",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.8535353535353537,
+  "px_auroc": 0.8539686277741626,
+  "aupro": 0.6772948114527609,
+  "cat": "tile",
+  "method": "PaDiM",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.5656565656565657,
+  "px_auroc": 0.7389641348794584,
+  "aupro": 0.3878611233323346,
+  "cat": "tile",
+  "method": "PaDiM",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.8650793650793651,
+  "px_auroc": 0.8251734240383208,
+  "aupro": 0.6407528176429991,
+  "cat": "tile",
+  "method": "PaDiM",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9780701754385965,
+  "px_auroc": 0.9354935094084147,
+  "aupro": 0.8862889725819928,
+  "cat": "wood",
+  "method": "Gabor-Gaussian",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9780701754385965,
+  "px_auroc": 0.9337395346856484,
+  "aupro": 0.888048358110868,
+  "cat": "wood",
+  "method": "Gabor-Gaussian",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9798245614035088,
+  "px_auroc": 0.9215717801019504,
+  "aupro": 0.8719622659609977,
+  "cat": "wood",
+  "method": "Gabor-Gaussian",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9763157894736842,
+  "px_auroc": 0.9054489565471225,
+  "aupro": 0.7331055859739646,
+  "cat": "wood",
+  "method": "Gabor-Gaussian",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9421052631578948,
+  "px_auroc": 0.8722765481073613,
+  "aupro": 0.745558550477911,
+  "cat": "wood",
+  "method": "Gabor-Gaussian",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9912280701754386,
+  "px_auroc": 0.9278373818585148,
+  "aupro": 0.881391584380956,
+  "cat": "wood",
+  "method": "PatchCore-lite",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9921052631578948,
+  "px_auroc": 0.9222228262951344,
+  "aupro": 0.8793408297510674,
+  "cat": "wood",
+  "method": "PatchCore-lite",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9868421052631579,
+  "px_auroc": 0.9275974846830095,
+  "aupro": 0.878136439342016,
+  "cat": "wood",
+  "method": "PatchCore-lite",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9649122807017543,
+  "px_auroc": 0.8912232220485078,
+  "aupro": 0.7318069399792325,
+  "cat": "wood",
+  "method": "PatchCore-lite",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9964912280701754,
+  "px_auroc": 0.8902267860872689,
+  "aupro": 0.8045447123667586,
+  "cat": "wood",
+  "method": "PatchCore-lite",
+  "perturb": "noise(s=10)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9877192982456141,
+  "px_auroc": 0.9321575997281973,
+  "aupro": 0.9097777030250886,
+  "cat": "wood",
+  "method": "PaDiM",
+  "perturb": "none",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9894736842105263,
+  "px_auroc": 0.9255018644263666,
+  "aupro": 0.9067517252522678,
+  "cat": "wood",
+  "method": "PaDiM",
+  "perturb": "bright-20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9807017543859649,
+  "px_auroc": 0.931029183930438,
+  "aupro": 0.907296816924002,
+  "cat": "wood",
+  "method": "PaDiM",
+  "perturb": "bright+20%",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9614035087719298,
+  "px_auroc": 0.8544852474604478,
+  "aupro": 0.7362770733536782,
+  "cat": "wood",
+  "method": "PaDiM",
+  "perturb": "blur(s=2)",
+  "k": 20
+ },
+ {
+  "img_auroc": 0.9640350877192982,
+  "px_auroc": 0.8901466953369913,
+  "aupro": 0.8122535063146173,
+  "cat": "wood",
+  "method": "PaDiM",
+  "perturb": "noise(s=10)",
+  "k": 20
+ }
+]

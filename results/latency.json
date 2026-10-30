@@ -1,0 +1,62 @@
+[
+ {
+  "method": "Gabor-Gaussian",
+  "threads": 8,
+  "k": 20,
+  "fit_s": 0.8201603000000004,
+  "ms_median": 38.15775000000032,
+  "ms_p95": 40.5567700000002,
+  "model_state_MB": 0.00744,
+  "backbone_MB": 0.0
+ },
+ {
+  "method": "PatchCore-lite",
+  "threads": 8,
+  "k": 20,
+  "fit_s": 2.1809609000000005,
+  "ms_median": 29.02040000000028,
+  "ms_p95": 38.06091500000042,
+  "model_state_MB": 3.145728,
+  "backbone_MB": 44.72
+ },
+ {
+  "method": "PaDiM",
+  "threads": 8,
+  "k": 20,
+  "fit_s": 0.9741324000000002,
+  "ms_median": 27.302749999999598,
+  "ms_p95": 34.83766499999987,
+  "model_state_MB": 165.4784,
+  "backbone_MB": 44.72
+ },
+ {
+  "method": "Gabor-Gaussian",
+  "threads": 2,
+  "k": 20,
+  "fit_s": 0.6700569000000005,
+  "ms_median": 35.79504999999994,
+  "ms_p95": 37.96710500000006,
+  "model_state_MB": 0.00744,
+  "backbone_MB": 0.0
+ },
+ {
+  "method": "PatchCore-lite",
+  "threads": 2,
+  "k": 20,
+  "fit_s": 0.5222483000000011,
+  "ms_median": 40.97635000000022,
+  "ms_p95": 42.91882499999993,
+  "model_state_MB": 3.145728,
+  "backbone_MB": 44.72
+ },
+ {
+  "method": "PaDiM",
+  "threads": 2,
+  "k": 20,
+  "fit_s": 1.1443370000000002,
+  "ms_median": 44.18879999999881,
+  "ms_p95": 46.497100000000735,
+  "model_state_MB": 165.4784,
+  "backbone_MB": 44.72
+ }
+]

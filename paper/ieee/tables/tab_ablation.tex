@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Ablation of the station descriptor ($k=20$, mean over five categories).}
+\label{tab:ablation}
+\footnotesize
+\begin{tabular}{@{}lcccc@{}}
+\toprule
+Variant & $D$ & Img. & Pix. & AUPRO \\
+\midrule
+full (L + Lab chroma + Gabor mean/std) & 30 & 0.872 & 0.888 & 0.728 \\
+w/o chroma (grey only) & 26 & 0.843 & 0.842 & 0.663 \\
+w/o Gabor std & 18 & 0.871 & 0.876 & 0.711 \\
+w/o Gabor (intensity + chroma stats only) & 6 & 0.833 & 0.829 & 0.620 \\
+6 orientations & 42 & 0.888 & 0.895 & 0.736 \\
+pool 9 px & 30 & 0.891 & 0.863 & 0.698 \\
+pool 25 px & 30 & 0.847 & 0.900 & 0.712 \\
+\bottomrule
+\end{tabular}
+\end{table}

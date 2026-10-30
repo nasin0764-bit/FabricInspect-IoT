@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\caption{Detection and localisation with $k=10$ defect-free shots (mean of three random draws). GG: Gabor--Gaussian (station), PC: PatchCore-lite (edge), PD: PaDiM. Best per metric in bold.}
+\label{tab:k10}
+\footnotesize
+\begin{tabular}{@{}lccccccccc@{}}
+\toprule
+& \multicolumn{3}{c}{Image AUROC} & \multicolumn{3}{c}{Pixel AUROC} & \multicolumn{3}{c}{AUPRO} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-7}\cmidrule(l){8-10}
+Category & GG & PC & PD & GG & PC & PD & GG & PC & PD \\
+\midrule
+carpet & 0.740 & \textbf{0.967} & 0.881 & 0.883 & \textbf{0.988} & 0.972 & 0.643 & \textbf{0.933} & 0.911 \\
+grid & \textbf{0.674} & 0.636 & 0.633 & 0.621 & \textbf{0.742} & 0.676 & 0.178 & \textbf{0.333} & 0.330 \\
+leather & 0.984 & \textbf{0.999} & 0.961 & \textbf{0.993} & 0.992 & 0.989 & \textbf{0.984} & 0.965 & 0.967 \\
+tile & 0.919 & \textbf{0.986} & 0.841 & 0.936 & \textbf{0.940} & 0.820 & 0.768 & \textbf{0.817} & 0.606 \\
+wood & 0.981 & \textbf{0.992} & 0.989 & \textbf{0.932} & 0.929 & 0.931 & 0.879 & 0.882 & \textbf{0.908} \\ \midrule
+\textit{Mean} & 0.860 & \textbf{0.916} & 0.861 & 0.873 & \textbf{0.918} & 0.878 & 0.690 & \textbf{0.786} & 0.744 \\
+\bottomrule
+\end{tabular}
+\end{table*}

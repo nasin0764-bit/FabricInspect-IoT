@@ -1,0 +1,21 @@
+\begin{table}[t]
+\centering
+\caption{Per-fabric decisions of the three policies ($k=10$, $m=0.1$, mean of three draws). Cascade uses the a-priori band $\alpha=0.6,\beta=1.5$; ``off.'' is the offloaded fraction.}
+\label{tab:gate}
+\footnotesize
+\setlength{\tabcolsep}{3.5pt}
+\begin{tabular}{@{}lccccccc@{}}
+\toprule
+& \multicolumn{2}{c}{Station only} & \multicolumn{3}{c}{Cascade} & \multicolumn{2}{c}{Edge only} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-6}\cmidrule(l){7-8}
+Category & F1 & FPR & F1 & FPR & off. & F1 & FPR \\
+\midrule
+carpet & 0.718 & 0.381 & 0.918 & 0.143 & 0.81 & 0.923 & 0.095 \\
+grid & 0.090 & 0.016 & 0.023 & 0.000 & 0.52 & 0.023 & 0.000 \\
+leather & 0.857 & 0.958 & 0.963 & 0.198 & 0.23 & 0.985 & 0.042 \\
+tile & 0.717 & 0.000 & 0.880 & 0.000 & 0.68 & 0.872 & 0.000 \\
+wood & 0.911 & 0.053 & 0.957 & 0.053 & 0.30 & 0.960 & 0.035 \\ \midrule
+\textit{Mean} & 0.659 & 0.282 & 0.748 & 0.079 & 0.51 & 0.753 & 0.034 \\
+\bottomrule
+\end{tabular}
+\end{table}

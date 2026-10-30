@@ -1,0 +1,137 @@
+{
+ "sizes": [
+  {
+   "cat": "carpet",
+   "gabor_bytes": 6107,
+   "patchcore_bytes": 1251264,
+   "gabor_learn_s": 0.9565171000000001,
+   "patchcore_learn_s": 3.5808154999999995
+  },
+  {
+   "cat": "grid",
+   "gabor_bytes": 5039,
+   "patchcore_bytes": 1116209,
+   "gabor_learn_s": 0.5483535999999996,
+   "patchcore_learn_s": 0.17041980000000034
+  },
+  {
+   "cat": "leather",
+   "gabor_bytes": 6147,
+   "patchcore_bytes": 1201804,
+   "gabor_learn_s": 0.5653186000000003,
+   "patchcore_learn_s": 0.1698069000000011
+  },
+  {
+   "cat": "tile",
+   "gabor_bytes": 6075,
+   "patchcore_bytes": 1274349,
+   "gabor_learn_s": 0.5794640000000015,
+   "patchcore_learn_s": 0.17907860000000042
+  },
+  {
+   "cat": "wood",
+   "gabor_bytes": 6084,
+   "patchcore_bytes": 1263786,
+   "gabor_learn_s": 0.5542999000000002,
+   "patchcore_learn_s": 0.17077910000000074
+  }
+ ],
+ "distribution": [
+  {
+   "kind": "gabor",
+   "link": "wifi",
+   "stations": 1,
+   "bytes": 6107,
+   "t_mean_s": 0.009987354278564453,
+   "t_max_s": 0.009987354278564453
+  },
+  {
+   "kind": "gabor",
+   "link": "wifi",
+   "stations": 8,
+   "bytes": 6107,
+   "t_mean_s": 0.014635562896728516,
+   "t_max_s": 0.014635562896728516
+  },
+  {
+   "kind": "gabor",
+   "link": "wifi",
+   "stations": 32,
+   "bytes": 6107,
+   "t_mean_s": 0.014277219772338867,
+   "t_max_s": 0.014277219772338867
+  },
+  {
+   "kind": "gabor",
+   "link": "constrained",
+   "stations": 1,
+   "bytes": 6107,
+   "t_mean_s": 0.09359312057495117,
+   "t_max_s": 0.09359312057495117
+  },
+  {
+   "kind": "gabor",
+   "link": "constrained",
+   "stations": 8,
+   "bytes": 6107,
+   "t_mean_s": 0.09227728843688965,
+   "t_max_s": 0.09227728843688965
+  },
+  {
+   "kind": "gabor",
+   "link": "constrained",
+   "stations": 32,
+   "bytes": 6107,
+   "t_mean_s": 0.09301042556762695,
+   "t_max_s": 0.09301042556762695
+  },
+  {
+   "kind": "patchcore",
+   "link": "wifi",
+   "stations": 1,
+   "bytes": 1251264,
+   "t_mean_s": 0.5187652111053467,
+   "t_max_s": 0.5187652111053467
+  },
+  {
+   "kind": "patchcore",
+   "link": "wifi",
+   "stations": 8,
+   "bytes": 1251264,
+   "t_mean_s": 0.5221300721168518,
+   "t_max_s": 0.5341250896453857
+  },
+  {
+   "kind": "patchcore",
+   "link": "wifi",
+   "stations": 32,
+   "bytes": 1251264,
+   "t_mean_s": 0.5333458185195923,
+   "t_max_s": 0.5472726821899414
+  },
+  {
+   "kind": "patchcore",
+   "link": "constrained",
+   "stations": 1,
+   "bytes": 1251264,
+   "t_mean_s": 10.060046911239624,
+   "t_max_s": 10.060046911239624
+  },
+  {
+   "kind": "patchcore",
+   "link": "constrained",
+   "stations": 8,
+   "bytes": 1251264,
+   "t_mean_s": 10.064385890960693,
+   "t_max_s": 10.064385890960693
+  },
+  {
+   "kind": "patchcore",
+   "link": "constrained",
+   "stations": 32,
+   "bytes": 1251264,
+   "t_mean_s": 10.08570870757103,
+   "t_max_s": 10.097990036010742
+  }
+ ]
+}
