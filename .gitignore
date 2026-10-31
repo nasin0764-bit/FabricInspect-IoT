@@ -28,3 +28,6 @@ __pycache__/
 *.log
 *.out
 *.synctex.gz
+
+# keep the compiled manuscript in git
+!paper/ieee/main.pdf

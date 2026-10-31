@@ -1,14 +1,12 @@
-Grid is the exception in Table~\ref{tab:threshold}: its LOO threshold is so conservative that almost no defect is flagged (recall 1.2\,\%, F1 0.023 for PatchCore-lite), which lowers every five-category mean. On the other four textures PatchCore-lite with $k=10$, $m=0.1$ reaches F1 0.935 at 4.3\,\% FPR and 89.4\,\% recall.
-
 \subsection{Confidence-Gated Offloading}\label{sec:res-gate}
-Fig.~\ref{fig:gate} shows the accuracy--offload trade-off obtained by sweeping $\alpha\in[0.3,1]$ for three values of $\beta$, and Table~\ref{tab:gate} details the a-priori operating point. Station-only inspection never offloads but reaches only F1 0.659 with 28.2\,\% false alarms; edge-only inspection reaches F1 0.753 at 3.4\,\% FPR but offloads every frame. The gated cascade with $(\alpha,\beta)=(0.6,1.5)$ attains F1 0.748---99.3\,\% of the edge-only value---while offloading 50.9\,\% of frames, and cuts the station-only false-alarm rate from 28.2\,\% to 7.9\,\%. Excluding grid, the cascade reaches F1 0.930 versus 0.935 for edge-only and 0.801 for station-only. Along the Pareto front, $(\alpha,\beta)=(0.7,1.5)$ keeps F1 at 0.739 with 39.8\,\% offload, and $(0.6,2.0)$ matches edge-only (0.753) with 61.8\,\%; the lower bound of the band, $\alpha$, controls how many frames are trusted as clearly normal and is the dominant knob, whereas $\beta=\infty$ (never declaring defects locally) wastes offloads on frames the station already recognises as defective.
+Fig.~\ref{fig:gate} shows the accuracy--offload trade-off obtained by sweeping $\alpha\in[0.3,1]$ for three values of $\beta$, and Table~\ref{tab:gate} details the a-priori operating point. Station-only inspection never offloads but reaches only F1 0.659 with 28.2\,\% false alarms; edge-only inspection reaches F1 0.753 at 3.4\,\% but offloads every frame. The cascade with $(\alpha,\beta)=(0.6,1.5)$ attains F1 0.748---99.3\,\% of the edge-only value---while offloading 50.9\,\% of the frames, and cuts the false-alarm rate to 7.9\,\% (without grid: F1 0.930 vs.\ 0.935 edge-only and 0.801 station-only). Along the Pareto front, $(0.7,1.5)$ keeps F1 at 0.739 with 39.8\,\% offload and $(0.6,2.0)$ matches edge-only with 61.8\,\%; the lower bound $\alpha$ is the dominant knob.
 
-The gate adapts to the fabric automatically (Table~\ref{tab:gate}): it offloads only 23\,\% of leather and 30\,\% of wood frames, where the station model is already strong, but 81\,\% of carpet frames, where it is weak. This is the desired behaviour of an uncertainty-driven policy, and it emerges from the LOO thresholds alone, without any labelled tuning per fabric. It also corrects the station's worst failure, the 95.8\,\% false-alarm rate on leather, to 19.8\,\%. The residual gap to edge-only on leather (FPR 4.2\,\%) comes from frames whose station score exceeds $\beta\tau_g$ although they are defect-free, which a larger $\beta$ removes at the cost of more offloads.
+The gate adapts to the fabric without any tuning (Table~\ref{tab:gate}): it offloads 23\,\% of leather and 30\,\% of wood frames, where the station model is strong, but 81\,\% of carpet frames, where it is weak, and it corrects the station's 95.8\,\% false-alarm rate on leather to 19.8\,\%.
 
 \begin{figure}[t]
 \centering
-\includegraphics[width=\columnwidth]{fig_gate.png}
-\caption{Accuracy--offload trade-off of the gate ($k=10$, mean of five textures and three draws). Each curve sweeps $\alpha$ from 1.0 (left) to 0.3 (right).}
+\includegraphics[width=0.92\columnwidth]{fig_gate.png}
+\caption{Accuracy--offload trade-off of the gate ($k=10$, mean of five textures and three draws); each curve sweeps $\alpha$ from 1.0 (left) to 0.3 (right).}
 \label{fig:gate}
 \end{figure}
 

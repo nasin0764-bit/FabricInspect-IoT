@@ -1,40 +1,14 @@
 \section{System Architecture}\label{sec:system}
 
-\begin{figure*}[t]
+\begin{figure}[t]
 \centering
-\includegraphics[width=0.92\textwidth]{fig_architecture.png}
-\caption{FabricInspect-IoT. A fabric is learned once from $k$ defect-free frames; the registry publishes the compact station model as a retained MQTT message and installs the deep model on the edge server. Each station scores every frame locally and offloads only uncertain frames; verdicts are published for supervision and machine control.}
+\includegraphics[width=\columnwidth]{fig_architecture.png}
+\caption{FabricInspect-IoT. The registry learns a fabric once from $k$ defect-free frames, publishes the compact station model as a retained MQTT message, and installs the deep model on the edge. Stations score every frame and offload only uncertain ones.}
 \label{fig:arch}
-\end{figure*}
+\end{figure}
 
-\subsection{Tiers}
-Fig.~\ref{fig:arch} shows the three tiers.
+Fig.~\ref{fig:arch} shows the three tiers. \emph{Station node:} each seaming machine carries a USB camera looking at the fabric in front of the seam line and a small computer (in our installation the machine's Android controller; in the experiments one CPU core). It holds only the station profile of the current fabric, scores each frame with the Gabor--Gaussian detector (Section~\ref{sec:gg}), and applies the confidence gate (Section~\ref{sec:gate}). \emph{Edge server:} one plant-level x86 machine without GPU subscribes to the offloaded frames of all stations, groups pending requests into micro-batches of up to $b_{\max}=8$, scores them with the PatchCore-lite model of the corresponding fabric (Section~\ref{sec:pc}), and returns the result. \emph{Profile registry:} when an operator learns a new fabric, the registry fits both models from the same $k$ frames, computes both thresholds, publishes the station profile as a \emph{retained} MQTT message, and stores the edge profile on the server. Because the broker keeps the last retained message per topic, a station that starts, reboots, or switches to that fabric receives the model immediately on subscription.
 
-\emph{Station node.} Each seaming machine carries a USB (UVC) camera looking at the fabric immediately in front of the seam line and a small computer (in our installation the machine's Android controller; in the experiments a single CPU core). The station holds only the station profile of the current fabric, scores each frame with the Gabor--Gaussian detector (Section~\ref{sec:gg}), and applies the confidence gate (Section~\ref{sec:gate}). Clear cases are decided locally; uncertain frames are JPEG-encoded and published to the edge.
+All communication uses MQTT~3.1.1~\cite{mqtt311} through a standard broker (Mosquitto~\cite{light2017mosquitto}) on four topics: \texttt{fi/profile/<fabric>/gabor} (station model, QoS~1, retained), \texttt{fi/st/<id>/offload} (JSON header plus $256\times256$ JPEG crop at quality 85, QoS~1), \texttt{fi/st/<id>/result} (JSON score and verdict, QoS~1), and \texttt{fi/st/<id>/verdict} (informational, QoS~0).
 
-\emph{Edge server.} A single plant-level server (any x86 machine; no GPU) subscribes to offloaded frames of all stations, groups pending requests into micro-batches of up to $b_{\max}=8$, scores them with the PatchCore-lite model of the corresponding fabric (Section~\ref{sec:pc}), and publishes the result to the requesting station.
-
-\emph{Profile registry.} When an operator learns a new fabric, the registry fits both models from the same $k$ frames, computes both LOO thresholds, publishes the station profile as a \emph{retained} MQTT message, and stores the edge profile on the server. Because the broker keeps the last retained message per topic, a station that starts, reboots, or switches to that fabric receives the model immediately on subscription, without any polling or file transfer service.
-
-\subsection{Protocol}
-All communication uses MQTT~3.1.1~\cite{mqtt311} through a standard broker (Mosquitto~\cite{light2017mosquitto} in our experiments). Table~\ref{tab:topics} lists the topics. Offload payloads carry a 4-byte header length, a JSON header (sequence number, fabric, timestamp), and a $256\times256$ JPEG crop (quality 85); results and verdicts are small JSON objects. QoS~1 is used for profiles, offloads and results, QoS~0 for verdicts, which are informational.
-
-\begin{table}[t]
-\centering
-\caption{MQTT topics of FabricInspect-IoT}
-\label{tab:topics}
-\footnotesize
-\begin{tabular}{@{}llll@{}}
-\toprule
-Topic & Dir. & QoS/Ret. & Payload \\
-\midrule
-\texttt{fi/profile/<fab>/gabor} & reg.$\to$st. & 1 / yes & station model (.npz) \\
-\texttt{fi/st/<id>/offload} & st.$\to$edge & 1 / no & header + JPEG \\
-\texttt{fi/st/<id>/result} & edge$\to$st. & 1 / no & JSON score, verdict \\
-\texttt{fi/st/<id>/verdict} & st.$\to$all & 0 / no & JSON verdict, tier \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\subsection{Operator Workflow and Implementation}
-In \emph{learn} mode the operator types the fabric name and slowly moves defect-free material under the camera; a frame is grabbed every 0.4\,s until $k$ frames (default 10) are collected. In \emph{inspect} mode each frame is centre-cropped to a square region of interest, scored, and shown with a heat-map; regions above threshold are outlined, and every decision is appended to a CSV log while defective frames are saved for review. A desktop GUI, a command-line interface, and the three IoT roles (\texttt{station}, \texttt{edge}, \texttt{publish}) share one detector module, so the numbers reported in this paper are produced by the code an operator runs. The implementation uses Python~3.9, OpenCV, SciPy, Eclipse Paho, and PyTorch/torchvision (CPU build) with public ImageNet ResNet-18 weights~\cite{he2016resnet}.
+In \emph{learn} mode the operator slowly moves defect-free material under the camera while a frame is grabbed every 0.4\,s until $k$ frames (default 10) are collected. In \emph{inspect} mode each frame is centre-cropped, scored, and shown with a heat-map whose above-threshold regions are outlined; every decision is logged and defective frames are saved for review. A desktop GUI, a command-line interface, and the three IoT roles share one detector module, so the numbers in this paper are produced by the code an operator runs. The implementation uses Python, OpenCV, SciPy, Eclipse Paho, and PyTorch (CPU) with public ImageNet ResNet-18 weights~\cite{he2016resnet}.

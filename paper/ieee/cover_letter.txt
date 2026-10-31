@@ -1,0 +1,22 @@
+Dear Editor-in-Chief,
+
+We submit the manuscript "Few-Shot, Label-Free Fabric Defect Inspection for Networked Seaming Stations via Confidence-Gated Edge Offloading" for consideration as a regular paper in the IEEE Internet of Things Journal (traditional, non-open-access submission).
+
+Automated fabric inspection today relies on supervised detectors that need many labelled defects per fabric and GPU training. This does not fit plants in which networked seaming stations process short runs of many different materials. The manuscript treats few-shot, label-free surface inspection as an Industrial IoT service and makes four contributions:
+
+1. A three-tier system (station node, CPU edge server, profile registry over MQTT). A fabric is learned from ten defect-free frames, and both a 6-kB station model and an edge model obtain their decision thresholds without any defect example (leave-one-out scoring).
+2. Confidence-gated offloading. The station decides clear cases locally and sends only uncertain frames to the edge. This retains 99% of the edge-only F1 while offloading half of the frames, and it adapts its offload rate to each fabric without tuning.
+3. Profile distribution through retained MQTT messages, and an analytical load model for sizing the edge server.
+4. A reproducible evaluation: few-shot detection on public MVTec AD textures, and a trace-driven simulator validated against a live testbed with a Mosquitto broker. On Wi-Fi, one CPU edge server meets a 200-ms deadline for 24 stations with the gate versus 16 without it, and uplink traffic falls by 39%. We also report the limitations openly, including a texture on which label-free thresholding fails and the constraints of single-host measurements.
+
+All code, configurations, and raw results are publicly available at https://github.com/nasin0764-bit/FabricInspect-IoT.
+
+The manuscript is original, has not been published, and is not under consideration elsewhere. All authors have approved the submission and declare no conflicts of interest. An AI assistant was used during software development and drafting, as disclosed in the Acknowledgment; the authors take full responsibility for the content.
+
+Sincerely,
+
+Petr Butovskiy (corresponding author)
+Technological Machines and Apparatus, Tashkent Institute of Textile and Light Industry, Tashkent, Uzbekistan
+gtnz1071980@gmail.com
+
+on behalf of all authors: Nasiba Palvannazirova, Ayaz Waseem, Nikita Lobasevich, Petr Butovskiy, Miralam Allamov
