@@ -33,3 +33,4 @@ __pycache__/
 !paper/ieee/main.pdf
 !docs/quick_guide.pdf
 paper/ieee/build.*
+paper/ieee/paper_final.*
