@@ -25,11 +25,15 @@ Source: IEEE IoT Journal Author Guidelines (April 2025), https://ieee-iotj.org/g
 5. **Abstract:** copy it from `main.tex`, between `\begin{abstract}` and `\end{abstract}`. Replace `\%` with `%`, `\,` with nothing, and `MVTec~AD` with `MVTec AD`.
 6. **Keywords:** Industrial Internet of Things (IIoT); edge computing; computation offloading; MQTT; anomaly detection; fabric defect detection; few-shot learning
 7. **Authors**, in this order, with affiliations and e-mails exactly as in the PDF:
-   1. Nasiba Palvannazirova, BUPT, nasiba@bupt.edu.cn
-   2. Ayaz Waseem, BUPT, 2024090002@bupt.cn
-   3. Nikita Lobasevich, BUPT, lnikbest@gmail.com
-   4. Petr Butovskiy, Tashkent Institute of Textile and Light Industry, gtnz1071980@gmail.com (**corresponding author**)
-   5. Miralam Allamov, Tashkent Institute of Textile and Light Industry, miralam3843678@gmail.com
+   1. Nasiba Palvannazirova, Beijing University of Posts and Telecommunications (BUPT), nasiba@bupt.edu.cn
+   2. Petr Butovskiy, Tashkent Institute of Textile and Light Industry, gtnz1071980@gmail.com (**corresponding author**)
+   3. Jakhongir Mirkhoshimov, Illinois Institute of Technology, School of Computing, jmirkhoshimov@hawk.illinoistech.edu
+   4. Ayaz Waseem, BUPT, 2024090002@bupt.cn
+   5. Nikita Lobasevich, BUPT, lnikbest@gmail.com
+   6. Miralam Allamov, Tashkent Institute of Textile and Light Industry, miralam3843678@gmail.com
+   7. Robiya Tuguzbaeva, Tashkent Institute of Textile and Light Industry, trobiya89@mail.ru
+   8. Firuza Dustova, **[affiliation missing]**, firuzadustovahamraevna@mail.ru
+   9. M. M. Agzamov, Tashkent Institute of Textile and Light Industry, agzamovmirhosil@gmail.com
 8. **Open access question:** answer **No / Traditional**.
 9. **Suggested reviewers (optional but recommended):** 3–5 researchers in fabric defect detection or edge AI who are not at your institutions and have not worked with you. You can take the corresponding authors of the recent fabric-defect or edge-AI papers in the reference list; their e-mails are printed on their papers (the PDFs are in `Desktop\111`).
 10. **Cover letter:** paste `cover_letter.txt`.
