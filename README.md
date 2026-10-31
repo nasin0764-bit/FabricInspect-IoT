@@ -91,10 +91,13 @@ Run on mains power with the performance power plan – timing results are invali
 ```
 python experiments/run_benchmark.py all     # detectors: few-shot, thresholds, ablation, robustness, latency
 python experiments/run_iot.py cascade       # gate trade-off (offline)
-python experiments/run_iot.py edgebench     # edge throughput mu(b), station cost
-python experiments/run_iot.py live          # Mosquitto + edge + 1..32 stations, emulated links
 python experiments/run_iot.py profile       # profile sizes and distribution time
-python experiments/make_figures.py          # figures + LaTeX tables into paper/
+python experiments/run_iot.py speedcheck    # must print ok=True before any timing run
+python experiments/run_traces.py            # service-time traces for the simulator (~3 min)
+# short live validation (Mosquitto + edge + stations, emulated links), PowerShell syntax:
+$env:FI_LINKS='wifi,constrained'; $env:FI_NS='1,4'; $env:FI_OUT='iot_live_validation.json'; python experiments/run_iot.py live
+python experiments/sim.py 0.0387            # validated trace-driven simulation, 1..64 stations
+python experiments/make_figures.py          # figures + LaTeX tables into paper/ieee/
 python -m pytest tests                      # smoke tests (synthetic data, incl. IoT round trip)
 ```
 

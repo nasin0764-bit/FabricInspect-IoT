@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\caption{Simulated scaling (10 seeds, 60\,s each, measured traces): p95 decision latency [ms] / deadline misses [\%] for $N$ stations at 5 frames/s, and mean uplink per station.}
+\label{tab:sim}
+\footnotesize
+\begin{tabular}{@{}llcccccc@{}}
+\toprule
+Link & Policy & $N=1$ & $N=8$ & $N=16$ & $N=32$ & $N=64$ & Uplink [kbit/s] \\
+\midrule
+wifi & station-only & 40 / 0 & 40 / 0 & 40 / 0 & 40 / 0 & 40 / 0 & 0 \\
+wifi & cascade & 116 / 0 & 121 / 0 & 137 / 0 & 242 / 14 & 43164 / 51 & 504 \\
+wifi & edge-only & 79 / 0 & 96 / 0 & 154 / 0 & 42868 / 100 & 142837 / 100 & 821 \\ \midrule
+constrained & station-only & 40 / 0 & 40 / 0 & 40 / 0 & 40 / 0 & 40 / 0 & 0 \\
+constrained & cascade & 508 / 81 & 450 / 52 & 465 / 53 & 534 / 52 & 43388 / 51 & 504 \\
+constrained & edge-only & 3420 / 100 & 2950 / 100 & 2987 / 100 & 43014 / 100 & 142966 / 100 & 821 \\
+\bottomrule
+\end{tabular}
+\end{table*}

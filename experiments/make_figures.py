@@ -1,4 +1,4 @@
-"""Build paper figures (PNG, 300 dpi) and tables (Markdown + JSON) from results/*.json."""
+﻿"""Build paper figures (PNG, 300 dpi) and tables (Markdown + JSON) from results/*.json."""
 import json
 import os
 import sys
@@ -14,7 +14,7 @@ import data
 
 R = os.path.join(os.path.dirname(__file__), "..", "results")
 P = os.path.join(os.path.dirname(__file__), "..", "paper")
-F = os.path.join(P, "figures")
+F = os.path.join(P, "ieee", "figures")
 os.makedirs(F, exist_ok=True)
 
 METHODS = ["Gabor-Gaussian", "PatchCore-lite", "PaDiM"]
@@ -50,7 +50,7 @@ tables = {}
 def fig_fewshot(rows):
     ks = sorted({r["k"] for r in rows if r["cat"] == "carpet"})
     for metric, fname, ylab in [("img_auroc", "fig_fewshot_image.png", "Image AUROC"),
-                                ("aupro", "fig_fewshot_aupro.png", "AUPRO (FPR≤0.3)")]:
+                                ("aupro", "fig_fewshot_aupro.png", "AUPRO (FPRâ‰¤0.3)")]:
         fig, axs = plt.subplots(1, 6, figsize=(7.2, 2.0), sharey=True)
         for ax, cat in zip(axs, CATS + ["mean"]):
             for m in METHODS:
@@ -165,7 +165,7 @@ def fig_system():
     ax.set_xlim(0, 100); ax.set_ylim(0, 30); ax.axis("off")
     boxes = [
         (1, 11, 12, 9, "USB camera\nover\nseam line"),
-        (17, 18, 15, 9, "LEARN\n5–20 defect-free\nframes"),
+        (17, 18, 15, 9, "LEARN\n5â€“20 defect-free\nframes"),
         (17, 3, 15, 9, "INSPECT\nlive frames"),
         (36, 11, 17, 9, "Detector\nPatchCore-lite or\nGabor-Gaussian"),
         (57, 18, 19, 9, "Fabric profile\n+ LOO threshold"),
@@ -320,13 +320,13 @@ def fig_gate(cas):
             pts.append((np.mean([r["offload"] for r in rs]), np.mean([r["f1"] for r in rs]), a))
         x, y, a = zip(*pts)
         ax.plot(x, y, ls, color=COL["PatchCore-lite"], lw=1.4, marker="o", ms=3,
-                label=f"cascade, β={'∞' if b == float('inf') else b}")
+                label=f"cascade, Î²={'âˆž' if b == float('inf') else b}")
     for pol, mk, lab in (("station-only", "D", "station only"), ("edge-only", "s", "edge only")):
         rs = [r for r in rows if r["policy"] == pol]
         ax.plot(np.mean([r["offload"] for r in rs]), np.mean([r["f1"] for r in rs]), mk, ms=6,
                 color=COL["Gabor-Gaussian"] if pol == "station-only" else INK, label=lab)
     rs = [r for r in rows if r["policy"] == "cascade" and r["alpha"] == 0.6 and r["beta"] == 1.5]
-    ax.annotate("default\n(α=0.6, β=1.5)", (np.mean([r["offload"] for r in rs]), np.mean([r["f1"] for r in rs])),
+    ax.annotate("default\n(Î±=0.6, Î²=1.5)", (np.mean([r["offload"] for r in rs]), np.mean([r["f1"] for r in rs])),
                 (0.08, 0.735), fontsize=6.5, color=INK, arrowprops=dict(arrowstyle="-", color=INK2, lw=0.6))
     ax.set_xlabel("fraction of frames offloaded"); ax.set_ylabel("F1 (mean of 5 textures)")
     ax.set_xlim(-0.03, 1.03)
@@ -410,7 +410,7 @@ def fig_live(live, eb=None):
         ax.text(1.05, 210, "frame period (200 ms)", fontsize=6, color=INK2)
         ax.set_xscale("log", base=2); ax.set_yscale("log")
         ax.set_xticks([1, 4, 8, 16, 32]); ax.set_xticklabels(["1", "4", "8", "16", "32"]); ax.minorticks_off()
-        ax.set_xlabel("stations N"); ax.set_title(f"p95 decision latency – {link}", fontsize=8, color=INK)
+        ax.set_xlabel("stations N"); ax.set_title(f"p95 decision latency â€“ {link}", fontsize=8, color=INK)
     axs[0].set_ylabel("ms")
     ax = axs[2]
     for pol, c, mk in pols[1:]:
@@ -423,7 +423,7 @@ def fig_live(live, eb=None):
                     color=c, lw=0.9, ls=":", label=pol + " (model, Eq. 6)")
     ax.axhline(1.0, color=INK2, lw=0.7, ls="--")
     ax.set_xscale("log", base=2); ax.set_xticks([1, 4, 8, 16, 32]); ax.set_xticklabels(["1", "4", "8", "16", "32"])
-    ax.minorticks_off(); ax.set_xlabel("stations N"); ax.set_title("edge utilisation – wifi", fontsize=8, color=INK)
+    ax.minorticks_off(); ax.set_xlabel("stations N"); ax.set_title("edge utilisation â€“ wifi", fontsize=8, color=INK)
     ax.legend(fontsize=5.5, loc="upper left")
     h, l = axs[0].get_legend_handles_labels()
     fig.legend(h, l, loc="upper center", ncol=3, bbox_to_anchor=(0.36, 1.08))
@@ -460,10 +460,13 @@ Link & Policy & $N$ & Offload & p50 [ms] & p95 [ms] & Miss [\%] & Uplink [kbit/s
 """)
 
 
-def tex_resources(lat, eb, prof=None):
+def tex_resources(lat, tr, prof=None):
     g = {(r["method"], r["threads"]): r for r in lat}
-    st = eb["station"]
-    mu = {e["batch"]: e for e in eb["edge"]}
+    sys.path.insert(0, os.path.dirname(__file__))
+    from sim import _clean
+    s = _clean(tr["station_ms"])
+    st = {"station_ms_median": float(np.median(s)), "station_ms_p95": float(np.quantile(s, .95))}
+    mu = {int(b): {"mu_fps": 1000 * int(b) / float(np.median(_clean(v)))} for b, v in tr["edge_ms"].items()}
     size = {}
     if prof:
         size["Gabor-Gaussian"] = np.mean([r["gabor_bytes"] for r in prof["sizes"]]) / 1e3
@@ -498,6 +501,113 @@ Station (1 thread, $k=10$): """ + f"{st['station_ms_median']:.1f} ms median, {st
 """)
 
 
+POLS = [("station-only", COL["Gabor-Gaussian"], "D"), ("cascade", COL["PatchCore-lite"], "o"),
+        ("edge-only", INK2, "s")]
+
+
+def fig_sim(sim, mu=None):
+    """Validated simulation: p95 latency, deadline misses (both links), edge utilisation."""
+    fig, axs = plt.subplots(1, 3, figsize=(7.2, 2.35))
+    for key, ls in (("nominal", "-"), ("edge_x2", ":")):
+        for pol, c, mk in POLS:
+            for j, (link, metric) in enumerate((("wifi", "lat_p95"), ("wifi", "deadline_miss"))):
+                rs = sorted([r for r in sim[key] if r["link"] == link and r["policy"] == pol],
+                            key=lambda r: r["stations"])
+                y = [r[metric] * (100 if metric == "deadline_miss" else 1) for r in rs]
+                axs[j].plot([r["stations"] for r in rs], y, ls, color=c, marker=mk if ls == "-" else None,
+                            ms=3, lw=1.4 if ls == "-" else 1.0, label=pol if key == "nominal" else None)
+            if pol != "station-only":
+                rs = sorted([r for r in sim[key] if r["link"] == "wifi" and r["policy"] == pol],
+                            key=lambda r: r["stations"])
+                axs[2].plot([r["stations"] for r in rs], [r["edge_util"] for r in rs], ls, color=c,
+                            marker=mk if ls == "-" else None, ms=3, lw=1.4 if ls == "-" else 1.0)
+                if key == "nominal" and mu:
+                    ns = np.array([r["stations"] for r in rs])
+                    o = np.mean([r["offload"] for r in rs])
+                    axs[2].plot(ns, np.minimum(ns * 5.0 * o / mu, 1.0), color=c, lw=0.7, ls="--")
+    axs[0].axhline(200, color=INK2, lw=0.7, ls="--")
+    axs[0].set_yscale("log"); axs[0].set_ylabel("ms"); axs[0].set_title("p95 decision latency (Wi-Fi)", fontsize=8)
+    axs[1].set_ylabel("%"); axs[1].set_title("deadline misses (Wi-Fi)", fontsize=8)
+    axs[2].set_title("edge utilisation (Wi-Fi)", fontsize=8); axs[2].set_ylim(0, 1.05)
+    for ax in axs:
+        ax.set_xscale("log", base=2); ax.set_xticks([1, 4, 16, 64]); ax.set_xticklabels(["1", "4", "16", "64"])
+        ax.minorticks_off(); ax.set_xlabel("stations N")
+    h, l = axs[0].get_legend_handles_labels()
+    h += [plt.Line2D([], [], color=INK2, ls=":", lw=1.0), plt.Line2D([], [], color=INK2, ls="--", lw=0.7)]
+    l += ["edge 2Ã— slower", "load model (6)"]
+    fig.legend(h, l, loc="upper center", ncol=5, bbox_to_anchor=(0.5, 1.09), fontsize=6.8)
+    fig.tight_layout()
+    fig.savefig(os.path.join(F, "fig_sim.png")); plt.close(fig)
+
+
+def sim_capacity(sim, key="nominal", link="wifi", miss_max=0.01):
+    """Largest simulated N whose deadline-miss rate stays <= miss_max, per policy."""
+    cap = {}
+    for pol, _, _ in POLS:
+        ok = [r["stations"] for r in sim[key] if r["link"] == link and r["policy"] == pol
+              and r["deadline_miss"] <= miss_max]
+        cap[pol] = max(ok) if ok else 0
+    return cap
+
+
+def tex_validation(val, sim_rows):
+    lines = []
+    for r in sorted(val["rows"], key=lambda r: (r["link"] != "wifi", [p[0] for p in POLS].index(r["policy"]), r["stations"])):
+        s = next(x for x in sim_rows if x["link"] == r["link"] and x["policy"] == r["policy"]
+                 and x["stations"] == r["stations"])
+        # objective flag for transient host throttling during the live run
+        hit = r["lat_p50"] > 2 * 36.1 and r["policy"] == "station-only" or \
+            (s["edge_util"] > 0 and r["edge_util"] > 3 * s["edge_util"])
+        mark = "$^\\dagger$" if hit else ""
+        lines.append(f"{r['link']}{mark} & {r['policy']} & {r['stations']} & {r['lat_p50']:.0f} / {s['lat_p50']:.0f} & "
+                     f"{r['lat_p95']:.0f} / {s['lat_p95']:.0f} & {100 * r['deadline_miss']:.1f} / "
+                     f"{100 * s['deadline_miss']:.1f} & {r['edge_util']:.2f} / {s['edge_util']:.2f} \\\\")
+    _w("tab_validation", r"""\begin{table}[t]
+\centering
+\caption{Validation of the trace-driven simulator against the live testbed (live / simulated, both 12\,s at 5 frames/s; simulation: mean of 20 seeds). Latency in ms, misses in \%. $^\dagger$Live run affected by transient host throttling (station median $>2\times$ its trace median, or edge utilisation $>3\times$ simulated).}
+\label{tab:validation}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}llccccc@{}}
+\toprule
+Link & Policy & $N$ & p50 & p95 & Miss & Edge util. \\
+\midrule
+""" + "\n".join(lines) + r"""
+\bottomrule
+\end{tabular}
+\end{table}
+""")
+
+
+def tex_sim(sim):
+    lines = []
+    for link in ("wifi", "constrained"):
+        for pol, _, _ in POLS:
+            rs = {r["stations"]: r for r in sim["nominal"] if r["link"] == link and r["policy"] == pol}
+            cells = []
+            for n in (1, 8, 16, 32, 64):
+                r = rs[n]
+                cells.append(f"{r['lat_p95']:.0f} / {100 * r['deadline_miss']:.0f}")
+            up = np.mean([r["uplink_kbps_per_station"] for r in rs.values()])
+            lines.append(f"{link} & {pol} & " + " & ".join(cells) + f" & {up:.0f} \\\\")
+        if link == "wifi":
+            lines[-1] += " \\midrule"
+    _w("tab_sim", r"""\begin{table*}[t]
+\centering
+\caption{Simulated scaling (10 seeds, 60\,s each, measured traces): p95 decision latency [ms] / deadline misses [\%] for $N$ stations at 5 frames/s, and mean uplink per station.}
+\label{tab:sim}
+\footnotesize
+\begin{tabular}{@{}llcccccc@{}}
+\toprule
+Link & Policy & $N=1$ & $N=8$ & $N=16$ & $N=32$ & $N=64$ & Uplink [kbit/s] \\
+\midrule
+""" + "\n".join(lines) + r"""
+\bottomrule
+\end{tabular}
+\end{table*}
+""")
+
+
 def fig_architecture():
     from matplotlib.patches import FancyBboxPatch
     fig, ax = plt.subplots(figsize=(7.2, 2.6))
@@ -514,16 +624,16 @@ def fig_architecture():
     # stations
     for i, y in enumerate((26.5, 15.5, 2.5)):
         lab = "Station " + ("1", "2", "N")[i]
-        box(1, y, 27, 8.5, lab, "USB camera, 1 CPU core\nGabor–Gaussian model + gate")
-    ax.text(14.5, 13.0, "⋮", ha="center", va="center", fontsize=9, color=INK2)
+        box(1, y, 27, 8.5, lab, "USB camera, 1 CPU core\nGaborâ€“Gaussian model + gate")
+    ax.text(14.5, 13.0, "â‹®", ha="center", va="center", fontsize=9, color=INK2)
     box(37, 11, 22, 14, "MQTT broker", "Mosquitto, plant LAN/Wi-Fi\nretained profiles\noffload / result / verdict", "#e8eef8")
-    box(70, 20, 29, 13, "Edge server (CPU)", "PatchCore-lite (ResNet-18)\nmicro-batching b ≤ 8\nper-fabric profiles")
-    box(70, 3, 29, 13, "Profile registry", "learn from k defect-free frames\nfit both models + LOO τ\npublish station profile (retained)")
+    box(70, 20, 29, 13, "Edge server (CPU)", "PatchCore-lite (ResNet-18)\nmicro-batching b â‰¤ 8\nper-fabric profiles")
+    box(70, 3, 29, 13, "Profile registry", "learn from k defect-free frames\nfit both models + LOO Ï„\npublish station profile (retained)")
     arr = dict(arrowstyle="-|>", color=INK2, lw=0.9, shrinkA=0, shrinkB=0)
     arr2 = dict(arrowstyle="<|-", color="#2a78d6", lw=0.9, shrinkA=0, shrinkB=0)
     for y in (30.5, 19.5, 6.5):
         ax.annotate("", (36.5, 18 + (y - 19) * 0.25), (28.6, y), arrowprops=dict(arrowstyle="<|-|>", color=INK2, lw=0.9))
-    ax.text(32.5, 33.6, "uncertain frames ↑\nresults, profiles ↓", ha="center", fontsize=5.8, color=INK2)
+    ax.text(32.5, 33.6, "uncertain frames â†‘\nresults, profiles â†“", ha="center", fontsize=5.8, color=INK2)
     ax.annotate("", (69.5, 27), (59.5, 21), arrowprops=arr)
     ax.annotate("", (59.5, 19), (69.5, 25), arrowprops=dict(arr, color="#eb6834"))
     ax.text(64.5, 27.6, "offloads", ha="center", fontsize=5.8, color=INK2)
@@ -548,10 +658,19 @@ if __name__ == "__main__":
     if tables.get("robust"): tex_robust(tables["robust"])
     cas = load("iot_cascade")
     if cas: fig_gate(cas); tex_gate_cat(cas)
-    live, eb = load_live(), load("iot_edgebench")
-    if live: fig_live(live, eb); tex_live(live)
-    if eb and tables.get("latency"): tex_resources(tables["latency"], eb, load("iot_profile"))
+    eb = load("iot_edgebench")
+    sim, val, tr = load("sim"), load("iot_live_validation"), load("traces")
+    if sim:
+        mu = None
+        if tr:
+            mu = max(1000 * b / np.median(v) for b, v in ((int(b), v) for b, v in tr["edge_ms"].items()))
+        fig_sim(sim, mu); tex_sim(sim)
+        print("capacity (miss<=1%):", sim_capacity(sim), "edge x2:", sim_capacity(sim, "edge_x2"))
+        if val:
+            tex_validation(val, sim["validation"])
+    if tr and tables.get("latency"): tex_resources(tables["latency"], tr, load("iot_profile"))
     if "noqual" not in sys.argv:
         fig_qualitative()
     json.dump(tables, open(os.path.join(R, "tables.json"), "w"), indent=1)
     print("figures:", os.listdir(F))
+

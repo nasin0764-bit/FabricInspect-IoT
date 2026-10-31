@@ -6,7 +6,7 @@
 \usepackage{multirow}
 \usepackage{xcolor}
 \usepackage[hidelinks]{hyperref}
-\graphicspath{{../figures/}}
+\graphicspath{{figures/}}
 \newcommand{\eg}{e.g.,\ }
 \newcommand{\ie}{i.e.,\ }
 
@@ -19,14 +19,16 @@
   \thanks{N. Lobasevich is with the School of Economics and Management, Beijing University of Posts and Telecommunications, Beijing, China (e-mail: lnikbest@gmail.com).}%
   \thanks{P. Butovskiy and M. Allamov are with Technological Machines and Apparatus, Tashkent Institute of Textile and Light Industry, Tashkent, Uzbekistan (e-mail: gtnz1071980@gmail.com; miralam3843678@gmail.com).}%
   \thanks{Corresponding author: Petr Butovskiy.}%
-  \thanks{Code, configuration, and raw results: [repository URL].}%
+  \thanks{Code, configuration, and raw results: \url{https://github.com/nasin0764-bit/FabricInspect-IoT}.}%
 }
 
 \markboth{IEEE Internet of Things Journal}{Palvannazirova \MakeLowercase{\textit{et al.}}: Few-Shot, Label-Free Fabric Defect Inspection}
 
 \maketitle
 
-%% ABSTRACT %%
+\begin{abstract}
+Automated fabric inspection relies on supervised detectors that need many labelled defects per fabric and GPU training, which does not fit plants where networked seaming stations process short runs of many materials. We present FabricInspect-IoT, a three-tier Industrial Internet of Things system for few-shot, label-free surface inspection. From ten defect-free frames, the system fits a 6-kB Gabor--colour Gaussian model that runs on a single station core and a ResNet-18 nearest-neighbour model on a CPU edge server; both derive their decision thresholds by leave-one-out scoring of the defect-free frames, without any defect example. A confidence gate decides clear cases at the station and offloads only uncertain frames over MQTT, and fabric profiles are distributed to all stations as retained messages. On the MVTec~AD textures, the edge model reaches F1 0.935 with 4.3\,\% false alarms on four of five categories, and the gate retains 99\,\% of the edge-only F1 while offloading half of the frames and cutting station-only false alarms from 28\,\% to 8\,\%. A trace-driven simulator, validated against a live testbed with a Mosquitto broker, shows that one CPU edge server meets a 200-ms decision deadline for 24 instead of 16 stations on Wi-Fi with the gate, reduces uplink traffic per station by 39\,\%, and that on 1-Mbit/s uplinks only locally decided frames meet the deadline. New fabrics are learned in about one second and reach all stations within 15\,ms. Code and data processing scripts are publicly available.
+\end{abstract}
 
 \begin{IEEEkeywords}
 Industrial Internet of Things (IIoT), edge computing, computation offloading, MQTT, anomaly detection, fabric defect detection, few-shot learning.
@@ -51,3 +53,4 @@ Industrial Internet of Things (IIoT), edge computing, computation offloading, MQ
 \bibliography{refs}
 
 \end{document}
+

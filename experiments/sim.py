@@ -23,10 +23,18 @@ TEXTURES = ["carpet", "grid", "leather", "tile", "wood"]
 HDR = 60  # bytes of MQTT + TCP/IP header per offload (approx.)
 
 
-def load_traces():
+def _clean(v, k=2.0):
+    """Drop samples > k x median: transient power-limit throttling of the measurement laptop
+    (~15 % of edge samples were 5-10x slower), not a property of a dedicated server."""
+    v = np.asarray(v, float)
+    return v[v <= k * np.median(v)]
+
+
+def load_traces(clean=True):
     t = json.load(open(os.path.join(OUT, "traces.json")))
-    return dict(station=np.array(t["station_ms"]) / 1e3,
-                edge={int(b): np.array(v) / 1e3 for b, v in t["edge_ms"].items()},
+    f = _clean if clean else np.asarray
+    return dict(station=f(t["station_ms"]) / 1e3,
+                edge={int(b): f(v) / 1e3 for b, v in t["edge_ms"].items()},
                 jpeg={c: np.array(v) for c, v in t["jpeg_bytes"].items()},
                 offload=t["offload_p"], valid=t.get("valid"))
 
@@ -95,14 +103,14 @@ def simulate(tr, n, policy, link, fps=5.0, seconds=60.0, b_max=8, overhead=0.0, 
                 mean_batch=float(np.mean(served_batches)) if served_batches else 0.0)
 
 
-def sweep(overhead, edge_scale=1.0, seeds=10, ns=(1, 2, 4, 8, 12, 16, 24, 32, 48, 64)):
+def sweep(overhead, edge_scale=1.0, seeds=10, ns=(1, 2, 4, 8, 12, 16, 24, 32, 48, 64), seconds=60.0):
     tr = load_traces()
     rows = []
     for link in LINKS:
         for pol in ("station-only", "cascade", "edge-only"):
             for n in ns:
-                rs = [simulate(tr, n, pol, link, overhead=overhead, edge_scale=edge_scale, seed=s)
-                      for s in range(seeds)]
+                rs = [simulate(tr, n, pol, link, overhead=overhead, edge_scale=edge_scale, seed=s,
+                               seconds=seconds) for s in range(seeds)]
                 row = dict(policy=pol, link=link, stations=n, edge_scale=edge_scale, seeds=seeds)
                 for key in ("offload", "lat_p50", "lat_p95", "deadline_miss", "uplink_kbps_per_station",
                             "edge_util", "mean_batch"):
@@ -115,7 +123,9 @@ def sweep(overhead, edge_scale=1.0, seeds=10, ns=(1, 2, 4, 8, 12, 16, 24, 32, 48
 if __name__ == "__main__":
     import sys
     ovh = float(sys.argv[1]) if len(sys.argv) > 1 else 0.0
-    out = {"overhead_s": ovh, "nominal": sweep(ovh), "edge_x2": sweep(ovh, edge_scale=2.0)}
+    out = {"overhead_s": ovh, "nominal": sweep(ovh), "edge_x2": sweep(ovh, edge_scale=2.0),
+           # same length as the live validation runs (60 frames per station)
+           "validation": sweep(ovh, seeds=20, ns=(1, 4), seconds=12.0)}
     json.dump(out, open(os.path.join(OUT, "sim.json"), "w"), indent=1)
     for r in out["nominal"]:
         print(f"{r['link']:11s} {r['policy']:13s} N={r['stations']:<3d} p95={r['lat_p95']:.0f} "
