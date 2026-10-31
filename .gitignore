@@ -32,3 +32,4 @@ __pycache__/
 # keep the compiled manuscript in git
 !paper/ieee/main.pdf
 !docs/quick_guide.pdf
+paper/ieee/build.*
