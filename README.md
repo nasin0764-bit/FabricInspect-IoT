@@ -1,9 +1,24 @@
-# FabricInspect
+# FabricInspect-IoT
 
-Few-shot, label-free fabric defect inspection for a seaming station.
+Few-shot, label-free fabric defect inspection for networked seaming stations.
 The operator shows the camera a few seconds of **defect-free** fabric; FabricInspect learns
 that fabric and then flags anything that does not look like it — no defect images, no
 labelling, no GPU.
+
+📄 **[Quick guide (PDF, 3 pages)](docs/quick_guide.pdf)** · 📝 [Manuscript (IEEE IoT Journal submission)](paper/ieee/main.pdf)
+
+![Learn and inspect](docs/img/guide_learn_inspect.png)
+
+Real outputs of the app on public test images (10 good frames learned per material). Five of the six defects are
+found; the faint wood scratch is missed.
+
+![Examples](docs/img/guide_gallery.png)
+
+With many machines, each **station** decides clear cases itself and sends only uncertain frames over MQTT to one
+**edge server**. This keeps 99 % of the edge-only accuracy while sending half the frames, and one ordinary PC can
+then serve 24 machines instead of 16.
+
+<img src="docs/img/fig_architecture.png" width="480">
 
 It is designed to sit next to the FabricScope ultrasonic seaming machine
 (USB camera over the seam line) but works with any USB/UVC camera or image folder.
